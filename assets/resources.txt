@@ -1,0 +1,23 @@
+Fonts (already imported on main.css)
+ ## opensans - 
+    font-family: 'Open Sans', sans-serif; (best for headings with 500 or 700 font weight)
+ ## Montserrat 
+    font-family: 'Montserrat', sans-serif; (best for contents)
+
+Light Mode
+    Background colors
+ ## Background color: Ghost white Hex #F8F8FF
+ ## nav bar: White: Hex #F7F7F7
+ ## footer: Navy Blue: Hex  #292664
+
+    Logo colors
+ #ffd87c - Yellow
+ #ffbd59 - Peach
+ #38b6ff - Light Blue
+ #292664 - lighter navy Blue
+ #232350 - Navy Blue
+ 
+
+
+
+

@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #ebedee;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* This banner is only to create a space between the nav and the footer*/
+.banner {
+  height: 100vh;
+}
+/* ================================ Web Nav bar ================================ */
+header {
+  font-family: "Open Sans", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: #fdfbfb;
+  position: sticky;
+  z-index: 10;
+}
+.Sitelogo {
+  width: 290px;
+  position: relative;
+  margin-top: -40%;
+  margin-bottom: -40%;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+  justify-content: center;
+  justify-items: center;
+}
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #232350;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+  background: linear-gradient(to right, #232350, #232350),
+    linear-gradient(to right, #ffbd59, rgba(0, 100, 200, 1), #232350);
+  background-size: 30% 0, 0 0;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  padding-bottom: 3px;
+  border-radius: 5px;
+}
+header ul li a:hover {
+  background-size: 0 3px, 100% 3px;
+  transform: scale(1.04);
+}
+.current {
+  background: linear-gradient(to left, #ffbd59, rgba(0, 100, 200, 1), #232350),
+    linear-gradient(to right, #ffbd59, rgba(0, 100, 200, 1), #232350);
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  padding-bottom: 3px;
+  border-radius: 5px;
+}
+/* ================================ Web Nav bar ================================ */
+
+/* ================================ Mobile Nav ================================ */
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+#hamburger-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: #232350;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-image: linear-gradient(
+    112.1deg,
+    #232350 11.4%,
+    rgba(63, 76, 119, 1) 70.2%
+  );
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 5px;
+}
+#hamburger-icon ul li a {
+  color: #fff;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 18%;
+  left: 12%;
+  right: 10%;
+  width: 80%;
+  padding: 5%;
+}
+@media only screen and (max-width: 900px) {
+  header nav {
+    display: none;
+  }
+  #hamburger-icon {
+    display: block;
+  }
+}
+/* ================================ Mobile Nav ================================ */
+
+/* ================================ Footer ================================ */
+footer {
+  width: 100%;
+  order: 2;
+  bottom: 0;
+  left: 0;
+  background: #232350;
+  padding: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+footer::before {
+    background-color: #232350;
+    display: block;
+    content: '';
+    position: absolute;
+    height: inherit;
+    width: inherit;
+  }
+footer .content {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,
+a {
+  color: #999;
+}
+footer .content .box {
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+  list-style: none;
+  text-decoration: none;
+  text-decoration-line: none;
+  background: linear-gradient(to right, #ffbd59, rgba(0, 100, 200, 1), #232350);
+  background-size: 50% 1px, 50% 1px;
+  background-position: 0 100%, 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 3px;
+  border-radius: 5px;
+}
+footer .content p {
+  text-align: justify;
+}
+footer .content .lower .topic {
+  margin: 24px 0 5px 0;
+  cursor: pointer;
+}
+footer .content .lower i {
+  padding-right: 16px;
+}
+footer .content .middle {
+  padding-left: 80px;
+}
+footer .content .middle a {
+  line-height: 32px;
+}
+footer .content .right input[type="text"] {
+  height: 40px;
+  width: 70%;
+  outline: none;
+  color: #999;
+  background: #232350;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid #38b6ff;
+  cursor: pointer;
+}
+.content .right input[type="text"]:hover {
+  background: #f7f7f7;
+  color: #232350;
+}
+footer .content .right input[type="submit"] {
+  height: 40px;
+  width: 20%;
+  font-size: 18px;
+  color: #999;
+  background: #232350;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 1px solid #ffbd59;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover {
+  background: #ffbd59;
+  color: #232350;
+}
+footer .content .media-icons a {
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100%;
+  border: 1px solid #999;
+  margin: 20px 5px 5px 0;
+  transition: all 0.3s ease;
+  color: #999;
+  background: #232350;
+}
+.content .media-icons a:hover {
+  border-color: #ffbd59;
+  background: #ffbd59;
+  color: #232350;
+}
+.quicklinks {
+  margin-top: -2%;
+}
+footer .bottom {
+  width: 100%;
+  text-align: right;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a {
+  color: #ffbd59;
+}
+footer a {
+  transition: all 0.3s ease;
+}
+footer a:hover {
+  color: #ffbd59;
+}
+.b-footer {
+  margin-top: 3%;
+  color: #999;
+  text-align: center;
+  background: linear-gradient(to right, #ffbd59, rgba(0, 100, 200, 1), #ffbd59);
+  background-size: 100% 1px, 100% 1px;
+  background-position: 100% 0, 100% 0;
+  background-repeat: no-repeat;
+  padding-top: 2%;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+}
+@media (max-width: 1100px) {
+  footer .content .middle {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 950px) {
+  footer .content .box {
+    width: 50%;
+  }
+  .content .right {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 560px) {
+  footer {
+    position: relative;
+  }
+  footer .content .box {
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle {
+    padding-left: 0;
+  }
+}
+/* ================================ Footer ================================ */
