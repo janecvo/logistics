@@ -138,7 +138,70 @@ header ul li a:hover {
   }
 }
 /* ================================ Mobile Nav ================================ */
+/* ==============================CONTACT FORM =============================== */
+.form-input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ffd87c;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ffd87c;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-button {
+  width: auto;
+  left: 50%;
+  background-color: #232350;
+  color: #ffd87c;
+  border-style: solid;
+  border-color: #ffd87c;
+  padding: 14px 20px;
+  margin: 8px 0;
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
 
+}
+
+.form-button[type=submit]:hover {
+  background-color: #ffd87c;
+  color: #232350;
+  border-style: solid;
+  border-color: #232350;
+  border-radius: 10px;
+}
+.contact-header {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 70px;
+  color: #232350;
+}
+.contact-form {
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: #38b6ff;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #ffd87c;
+}
+/* ==============================CONTACT FORM =============================== */
 /* ================================ Footer ================================ */
 footer {
   width: 100%;

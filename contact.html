@@ -41,8 +41,26 @@
     </header>
     <!-- nav bar -->
 
-    <section class="banner">
-    </section>
+<div class="contact-form">
+    <h3 class="contact-header">Contact Us</h3>
+    <form id="clearFrom">
+
+        <label for="fName">Full Name</label>
+        <input class="form-input" type="text" id="fName" name="fName" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input class="form-input" type="text" id="email" name="email" placeholder="Enter your email address" required>
+
+        <label for="subject">Subject</label>
+        <input class="form-input" type="text" id="subject" name="subect" placeholder="Enter your message subject" required>
+        
+        <label for="message">Message</label>
+        <textarea for="message" type="text" id="message" name="message" placeholder="Enter your message" required></textarea>
+        
+        <button class="form-button" type="submit" id="submit">Submit</button>
+
+    </form>
+</div>
 
     <!-- Footer -->
     <footer>
@@ -64,6 +82,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="middle box">
                 <div class="topic">Quick Links</div>
                 <div class="quicklinks"><a href="index.html">Home</a></div>
@@ -90,8 +109,9 @@
         </div>
     </footer>
     <!-- Footer -->
-
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script type="text/JavaScript" src="assets/js/main.js"></script>
 </body>
 
 </html>
