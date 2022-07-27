@@ -2,6 +2,7 @@
 header {
     background: none;
     color:#fdfbfb;
+    /* box-shadow: none; */
 }
 header.sticky{
     background: #fdfbfb;
@@ -14,5 +15,4 @@ header.sticky ul li a {
 header ul li a {
     color: #fff;
 }
-
 /* transparent to solid nav bar */
