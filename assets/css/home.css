@@ -1,0 +1,18 @@
+/* transparent to solid nav bar */
+header {
+    background: none;
+    color:#fdfbfb;
+}
+header.sticky{
+    background: #fdfbfb;
+}
+/* header.sticky .sitelogo{
+} */
+header.sticky ul li a {
+    color: #232350;
+}
+header ul li a {
+    color: #fff;
+}
+
+/* transparent to solid nav bar */
