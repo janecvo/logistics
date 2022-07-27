@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
   apiKey: "AIzaSyAzadFkol2qPJm1K0F-H8waGKJ_2cSVzRw",
   authDomain: "freight-liner-data.firebaseapp.com",
@@ -63,8 +64,19 @@ submitButton.addEventListener("click", (e) => {
   clearForm()
 });
 
+
+//mobile toggle for nav
+
 function toggleMobileMenu(menu) {
     menu.classList.toggle('open');
 }
 
+
 // Form information
+
+//change the nav bar background color when scrolled
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+
