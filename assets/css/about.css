@@ -1,127 +1,107 @@
 /* start of Landing Page */
 .aboutUsLanding {
   position: relative;
-  color: #292664;
+  color: #232350;
   width: 100%;
 }
 .aboutUsLanding img {
-  margin-top: 1%;
+  width: 100%;
+  margin-top: -8%;
 }
 .top-left {
   position: absolute;
-  width: 30%;
-  top: 90px;
-  left: 50px;
-  text-align: left;
-  padding: 40px;
+  width: 70%;
+  top: 60px;
+  left: 200px;
+  padding: 50px;
   margin: auto;
-  text-justify: distribute;
-  border-top-right-radius: 30%;
-  border-bottom-right-radius: 5%;
-  border-top-left-radius: 5%;
-  border-bottom-left-radius: 5%;
-  background-color: #ffd87c;
+  text-align: justify;
+  border-radius: 10px;
+  border-top-right-radius: 50px;
 }
 .top-left p {
-  font-family: "montserrat", sans-serif;
-  font-size: large;
+  font-weight: 500;
 }
-.b-footer2 {
-  background: linear-gradient(to right, #ffbd59, rgba(0, 100, 200, 1), #ffbd59);
-  background-size: 100% 2px, 100% 2px;
-  background-position: 100% 0, 100% 0;
-  background-repeat: no-repeat;
-  padding-top: 1%;
-  border-radius: 10px;
-  margin-top: -0.3%;
-}
-.about-media-icons {
+.aboutreadmore {
   font-size: 16px;
-  width: 200px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 100%;
-  color: #292664;
+  justify-content: end;
+  border-radius: 20%;
 }
-.about-media-icons a {
-  color: #292664;
+.aboutreadmore p,
+a {
+  color: #232350;
 }
-.about-media-icons a:hover {
-  transform: scale(1.3);
+.aboutreadmore a:hover {
+  transform: scale(1.5);
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .top-left {
+    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.5px 1px 0.5px rgba(0, 0, 0, 0.2);
+  }
 }
 @media (max-width: 750px) {
+  .aboutUsLanding {
+    width: 400px;
+  }
   .top-left {
     position: relative;
-    width: 80%;
+    width: 100%;
+    padding: 25px;
     margin-bottom: 30%;
     margin-top: -5%;
-    margin-right: 30%;
+    margin-left: -36%;
   }
   .aboutUsLanding img {
-    display: none;
+    position: absolute;
+    height: 135vh;
+    width: 100vw;
+    opacity: 80%;
   }
+  footer div a {
+    color: #999;
+  }
+}
+footer div a {
+  color: #999;
 }
 /* end of Landing Page */
 
 /* start of core values */
 .corevaluesbanner {
-  height: 40vh;
+  height: 50vh;
 }
-.corevaluecontainer {
+.corevaluetitle {
   margin-top: -10px;
-  padding-top: -80px;
-}
-.corevaluecontainer h1 {
-  font-size: 1.3em;
-  text-transform: uppercase;
-  letter-spacing: 10px;
   text-align: center;
-  font-weight: 500;
   color: #232350;
-  font-family: "open sans", sans-serif;
+  letter-spacing: 5px;
+  padding: 25px;
 }
-.corevaluecontainer h1::before {
+.corevaluetitle h3::before {
   content: "─";
   margin-right: 0.6em;
   color: #232350;
 }
-.corevaluecontainer h1::after {
+.corevaluetitle h3::after {
   content: "─";
   margin-left: 0.6em;
   color: #232350;
 }
 .infographic {
-  margin: 20px;
-  margin-right: 100px;
-  width: 97.8%;
-  font-family: "open sans", sans-serif;
-  position: relative;
-  border-radius: 20px;
-  margin-bottom: 100px;
+  width: 90%;
+  margin: auto;
 }
 .slide-up {
-  margin: 0px;
   position: relative;
   overflow: hidden;
-  width: calc(25% - 2px);
-  height: 213px;
+  width: calc(20% - 2px);
+  height: 300px;
   float: left;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-.info-content {
-  padding-top: 50px;
-  padding-right: 40px;
-  padding-left: 30px;
-  color: #fff;
-  font-weight: 300;
-  background-color: #232350;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  font-family: "montserrat", sans-serif;
 }
 .stat-header {
   font-size: 16px;
@@ -131,18 +111,34 @@
 .info-cover {
   background-color: #ffd87c;
   width: 100%;
-  height: 92%;
+  height: 77.5%;
   position: absolute;
-  text-align: center;
   top: 0;
   left: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   transition: all 0.4s ease;
 }
 .info-cover img {
-  width: 50px;
+  width: 70px;
+  margin-top: -50%;
 }
 .slide-up:hover .info-cover {
   top: -85%;
+}
+.info-content {
+  padding: 25px;
+  color: #fff;
+  font-weight: 300;
+  background-color: #232350;
+  height: 77.5%;
+  width: 100%;
+  text-align: left;
+  font-family: "montserrat", sans-serif;
+  cursor: context-menu;
 }
 .custom-span {
   width: 100px;
@@ -153,17 +149,190 @@
   margin-top: 15px;
   margin-bottom: 10px;
 }
+/* end of core values */
+
+/* start of why choose us */
+.whycontainer {
+  padding: 40px;
+  color: #fff;
+  background-color: #232350;
+}
+.whycontainer h1 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  font-family: "open sans", serif;
+  color: #ffd87c;
+}
+.whycontainer h1::before {
+  content: "─";
+  margin-right: 0.6em;
+  color: #ffd87c;
+}
+.whycontainer h1::after {
+  content: "─";
+  margin-left: 0.6em;
+  color: #ffd87c;
+}
+.whyboxes {
+  background-color: #232350;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 40%;
+}
+.whybox {
+  width: 40vw;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align: justify;
+  padding: 0 4vw 4vw;
+  border-right: 2px;
+  border-left: 0;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, #ffbd59, #38b6ff, #ffbd59) 1 100%;
+}
+.whybox:last-child {
+  border-right: 0;
+  text-align: justify;
+  margin-left: -40px;
+}
+/* End of why choose us */
+
+/* <!-- Start of what we offer--> */
+.whatweoffercontainer {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+  margin-top: -80px;
+  margin-bottom: -90px;
+}
+.whatweoffercontainer .whatweofferinfo {
+  width: 45%;
+  float: left;
+  margin-top: 130px;
+  color: #232350;
+}
+.whatweoffercontainer .whatweofferinfo h1 {
+  font-size: 32px;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  color: #232350;
+}
+.whatweoffercontainer .whatweofferinfo p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #232350;
+}
+.whatweoffercontainer .whatweofferinfo button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #232350;
+}
+.whatweoffercontainer .whatweofferimage {
+  width: 50%;
+  float: right;
+  margin-top: 35px;
+}
+.whatweoffercontainer .whatweofferimage img {
+  max-width: 100%;
+}
+/* End of what we offer */
+
+/* Start Partnerlogos */
+.partnerlogoscontainer {
+  margin-bottom: 30px;
+}
+.partnerlogoscontainer h1 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  font-family: "open sans", serif;
+  color: #232350;
+}
+.partnerlogoscontainer h1::before {
+  content: "─";
+  margin-right: 0.6em;
+  color: #232350;
+}
+.partnerlogoscontainer h1::after {
+  content: "─";
+  margin-left: 0.6em;
+  color: #232350;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 180px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 180px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+/* end Partnerlogos */
+
+/* start of mobile */
 @media screen and (max-width: 550px) {
+  .corevaluesbanner {
+    height: 100vh;
+    margin-top: -20px;
+    margin-bottom: 270px;
+    margin-left: 20px;
+  }
   .infographic {
-    width: "97%";
-    padding-bottom: 5vw;
+    width: 100%;
   }
   .slide-up {
     margin: 0px;
     height: 15vw;
     position: relative;
     overflow: hidden;
-    width: 49.3%;
+    width: 50%;
     height: 240px;
     float: left;
   }
@@ -224,171 +393,35 @@
     margin-top: 15px;
     margin-bottom: 10px;
   }
+  .whyboxes {
+    border-image: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+  }
+  .whybox {
+    width: 100%;
+    text-align: justify;
+    border-style: none;
+    margin-top: -40px;
+  }
+  .whybox:last-child {
+    text-align: justify;
+    margin: auto;
+    margin-top: -40px;
+  }
+  .partnerlogoscontainer {
+    margin-top: 600px;
+  }
+  .whatweofferimage {
+    display: none;
+  }
+  .whatweoffercontainer {
+    margin-left: 40px;
+    width: 900px;
+    position: absolute;
+    text-align: justify;
+  }
 }
-/* end of why core values */
-
-/* start of why choose us */
-.whycontainer {
-  padding: 5vw;
-  background-color: #232350;
-  color: #fff;
-}
-.whycontainer h1 {
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  text-align: center;
-  font-family: "open sans", serif;
-  font-weight: 200;
-  color: #ffd87c;
-}
-.whycontainer h1::before {
-  content: "─";
-  margin-right: 0.6em;
-  color: #ffd87c;
-}
-.whycontainer h1::after {
-  content: "─";
-  margin-left: 0.6em;
-  color: #ffd87c;
-}
-.whyboxes {
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  height: 40%;
-}
-.whybox {
-  width: 40vw;
-  font-size: 1.1em;
-  font-weight: 300;
-  text-align: right;
-  padding: 0 4vw 4vw;
-  border-right: 2px;
-  border-left: 0;
-  border-style: solid;
-  border-image: linear-gradient(to bottom, #ffbd59, #38b6ff, #ffbd59) 1 100%;
-}
-.whybox:last-child {
-  border-right: 0;
-  text-align: left;
-  margin-left: -60px;
-}
-/* End of why choose us */
-
-/* Start Partnerlogos */
-.partnerlogoscontainer {
-  margin: auto;
-  padding: 50px;
-}
-.partnerlogoscontainer h1 {
-  margin-bottom: 20px;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  text-align: center;
-  font-weight: 500;
-  color: #232350;
-  font-family: "open sans", sans-serif;
-}
-.partnerlogoscontainer h1::before {
-  content: "─";
-  margin-right: 0.6em;
-  color: #232350;
-}
-.partnerlogoscontainer h1::after {
-  content: "─";
-  margin-left: 0.6em;
-  color: #232350;
-}
-.slick-slide {
-  margin: 0px 20px;
-}
-.slick-slide img {
-  width: 100%;
-}
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-.slick-list:focus {
-  outline: none;
-}
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-}
-.slick-track:before,
-.slick-track:after {
-  display: table;
-  content: "";
-}
-.slick-track:after {
-  clear: both;
-}
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-[dir="rtl"] .slick-slide {
-  float: right;
-}
-.slick-slide img {
-  display: block;
-}
-.slick-slide.slick-loading img {
-  display: none;
-}
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-.slick-initialized .slick-slide {
-  display: block;
-}
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-  display: none;
-}
+/* end of mobile */
