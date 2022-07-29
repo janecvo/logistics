@@ -53,6 +53,7 @@ header ul li a {
   position: relative;
   margin: 0 15px;
   text-decoration: none;
+  font-size: 1.1em;
   color: #232350;
   letter-spacing: 2px;
   font-weight: 500px;
@@ -125,7 +126,7 @@ header ul li a:hover {
   display: none;
   position: fixed;
   top: 18%;
-  left: 12%;
+  left: 10%;
   right: 10%;
   width: 80%;
   padding: 5%;
