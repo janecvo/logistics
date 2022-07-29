@@ -1,0 +1,170 @@
+
+
+
+
+.form-input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* display: inline-block; */
+    border: 2px solid #ffd87c;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* display: inline-block; */
+    border: 2px solid #ffd87c;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .form-button {
+    
+    width: auto;
+    left: 50%;
+    background-color: #232350;
+    color: #ffd87c;
+    border-style: solid;
+    border-color: #ffd87c;
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  
+  }
+  #clearFrom {
+    color: #ffd87c;
+    background-color:  #232350;
+    min-height: 30vh;
+    border-radius: 10px;
+    object-fit: contain;
+    width: 40%;
+    float: right;
+    
+    justify-content: center;
+    margin-right: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 15px;
+  }
+  .form-button[type=submit]:hover {
+    background-color: #ffd87c;
+    color: #232350;
+    border-style: solid;
+    border-color: #232350;
+    border-radius: 10px;
+  }
+  .contact-header {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2em;
+    color:#ffd87c;
+  }
+  .contact-text {
+    font-size: 10px;
+  }
+  .contact-form {
+    /* float: right; */
+    
+    
+    width: 100%;
+    background-image: url('../img/contact/contactHero.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 65vh;
+  }
+
+.contact-info-banner {
+
+}
+
+.contact-info-banner-container {
+  margin-top: -10px;
+  
+}
+.contact-info-banner-container h1 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #232350;
+  font-family: "open sans", sans-serif;
+}
+.contact-info-banner-container h1::before {
+  content: "─";
+  margin-right: 0.6em;
+  color: #232350;
+}
+.contact-info-banner-container h1::after {
+  content: "─";
+  margin-left: 0.6em;
+  color: #232350;
+}
+
+.info-containers-group {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.info-line {
+  width: 100px;
+  background: #232350;
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.info-container img {
+  padding-top: 10px;
+  width: 5em;
+  color: #232350;
+  
+}
+
+.small-text {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 1px;
+}
+
+.sub-text {
+  text-align: left;
+  margin-bottom: 1px;
+}
+
+.sub-text-address {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.info-container {
+  width: 20em;
+  height: 21em;
+  text-align: center;
+  background-color: #ffd87c;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1rem solid  #232350;
+  color: #232350;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+
+.contact-information-container {
+  
+}
