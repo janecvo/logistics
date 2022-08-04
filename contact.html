@@ -8,6 +8,7 @@
     <title>Contact | Freightliner</title>
     <link rel="icon" type="image/x-icon" href="assets/img/main/favicon.svg">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 
@@ -41,26 +42,95 @@
     </header>
     <!-- nav bar -->
 
+
 <div class="contact-form">
-    <h3 class="contact-header">Contact Us</h3>
+    
     <form id="clearFrom">
-
+        <h3 class="contact-header">Get In Touch</h3>
+        <p class="contact-text">Have any questions? We are always happy to help. Do not hesitate to call us or fill in the form below. We try to get back as soon as possible.</p>
+        <br>
+        <div class="block-input">
         <label for="fName">Full Name</label>
+        <p></p>
         <input class="form-input" type="text" id="fName" name="fName" placeholder="Enter your full name" required>
-
+        </div>
+        <div class="block-input">
         <label for="email">Email Address</label>
+        <p></p>
         <input class="form-input" type="text" id="email" name="email" placeholder="Enter your email address" required>
-
+        </div>
+        <div class="block-input">
         <label for="subject">Subject</label>
+        <p></p>
         <input class="form-input" type="text" id="subject" name="subect" placeholder="Enter your message subject" required>
-        
+        </div>
+        <div class="block-input">
         <label for="message">Message</label>
         <textarea for="message" type="text" id="message" name="message" placeholder="Enter your message" required></textarea>
-        
+        </div>
         <button class="form-button" type="submit" id="submit">Submit</button>
 
     </form>
 </div>
+<br>
+
+<section class="contact-information-container">
+    <div class="contact-info-banner-container">
+    <h1 class="contact-info-banner">Contact Information</h1>
+    </div>
+    <div class="info-containers-group">
+    <div class="info-container">
+        <div><img alt="Icon - Customer Satisfaction" src="assets/img/contact/pin.png"> </div>
+        <span class="info-line"></span>
+        <p style="font-weight: bold">Address</p>
+        <br>
+        <p class="sub-text-address">Bole Sub City Woreda 5</p>
+        <p class="sub-text-address">Africa Avenue Friendship</p>
+        <p class="sub-text-address">Business Center, 7th Floor</p>
+        <p class="sub-text-address">Number 701-2-3</p>
+        <p class="sub-text-address">Addis Ababa, Ethiopia</p>
+        
+    </div>
+    <div class="info-container">
+        <div><img alt="Icon - Customer Satisfaction" src="assets/img/contact/phone-call.png"></div>
+        <span class="info-line"></span>
+        <p style="font-weight: bold">Call Us</p>
+        <br>
+        <p class="sub-text">Main Line: +251 11 615 1289</p>
+        <p class="sub-text">Fax: +251 11 615 1569</p>
+        <br>
+        <p class="small-text">General Manager Ermias G/Medhin:</p>
+        <p class="small-text">+251 960437614 / +251 93 598 1772</p>
+        <p class="small-text">Deputy Manager Leyouwork Gezahegn:</p>
+        <p class="small-text">+251 91 114 1860 / +251 93 598 1773</p>
+        <p class="small-text">Operation Manager:</p>
+        <p class="small-text">+251 91 319 2005 / +251 92 991 4813</p>
+    </div>
+    <div class="info-container">
+        <div><img alt="Icon - Customer Satisfaction" src="assets/img/contact/email.png"></div>
+        <span class="info-line"></span>
+        <p style="font-weight: bold">Email</p>
+        <br>
+        <p class="sub-text-address">info@belylogisticsethiopia.com</p>
+        <p class="sub-text-address">operations@belylogisticsethiopia.com</p>
+        <p class="sub-text-address">bely@belylogistics.com</p>
+        <p class="sub-text-address">ermiasge@gmail.com</p>
+        <p class="sub-text-address">infoermiasge@gmail.com</p>
+    </div>
+    <div class="info-container">
+        <div><img alt="Icon - Customer Satisfaction" src="assets/img/contact/clock.png"></div>
+        <span class="info-line"></span>
+        <p style="font-weight: bold">Hours</p>
+        <br>
+        <p class="sub-text-hours">Monday-Friday</p>
+        <p class="sub-text-hours">8:00 AM - 05:00 PM</p>
+        <br>
+        <p class="sub-text-hours">Saturday</p>
+        <p class="sub-text-hours">8:30 AM - 12:00 AM</p>
+    </div>
+    </div>
+    
+</section>
 
     <!-- Footer -->
     <footer>
@@ -112,6 +182,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
     <script type="text/JavaScript" src="assets/js/main.js"></script>
+    <script type="text/JavaScript" src="assets/js/about.js"></script>
 </body>
 
 </html>
