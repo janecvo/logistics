@@ -1,0 +1,37 @@
+ about.html                                         |  61 [32m++[m[31m--[m
+ assets/colors.html                                 |  28 [31m--[m
+ assets/css/about.css                               | 118 [32m+++++[m[31m---[m
+ assets/css/home.css                                | 336 [32m+++++++++++++++++++[m[31m--[m
+ assets/css/main.css                                |   4 [32m+[m[31m-[m
+ assets/img/About/aboutusimage.jpg                  | Bin [31m534089[m -> [32m897085[m bytes
+ assets/img/About/aboutusimage2.jpg                 | Bin [31m1084546[m -> [32m0[m bytes
+ assets/img/About/companyprofile.pdf                | Bin [31m0[m -> [32m589198[m bytes
+ .../logos/1200px-CMA_CGM_logo.svg_-1024x625.png    | Bin [31m0[m -> [32m59893[m bytes
+ .../img/About/logos/EgyptAir_f73137-modified.png   | Bin [31m0[m -> [32m17838[m bytes
+ .../logos/Hapag-Lloyd-China-Ltd-logo-modified.png  | Bin [31m0[m -> [32m72529[m bytes
+ assets/img/About/logos/Maersk-Logo.png             | Bin [31m0[m -> [32m9813[m bytes
+ assets/img/About/logos/cosco-logo-7.png            | Bin [31m0[m -> [32m22419[m bytes
+ .../img/About/logos/emirates-airlines-logo-png.png | Bin [31m0[m -> [32m55254[m bytes
+ .../logos/ethiopian_airlines_logo-modified.png     | Bin [31m0[m -> [32m99248[m bytes
+ assets/img/About/logos/logo_pil.png                | Bin [31m0[m -> [32m63092[m bytes
+ assets/img/About/logos/msc.png                     | Bin [31m0[m -> [32m32022[m bytes
+ .../saudia-airlines-logo-png--7349-modified.png    | Bin [31m0[m -> [32m1985042[m bytes
+ assets/img/Home/Freightliner.mp4                   | Bin [31m0[m -> [32m61118755[m bytes
+ assets/img/Home/destinations.mov                   | Bin [31m0[m -> [32m14550196[m bytes
+ assets/img/Home/herovideo4.mov                     | Bin [31m80980179[m -> [32m0[m bytes
+ assets/img/Home/services/customs.jpeg              | Bin [31m0[m -> [32m1180148[m bytes
+ assets/img/Home/services/freight.jpeg              | Bin [31m0[m -> [32m979941[m bytes
+ assets/img/Home/services/insurance.jpeg            | Bin [31m0[m -> [32m1019140[m bytes
+ assets/img/Home/services/shipping.jpeg             | Bin [31m0[m -> [32m2631009[m bytes
+ assets/img/Home/services/transport.jpeg            | Bin [31m0[m -> [32m1027236[m bytes
+ assets/img/Home/services/warehousing.jpg           | Bin [31m0[m -> [32m14846545[m bytes
+ assets/img/Home/workwithus.jpg                     | Bin [31m0[m -> [32m9089684[m bytes
+ assets/img/main/dots.png                           | Bin [31m0[m -> [32m100590[m bytes
+ assets/img/main/dots.svg                           |   1 [32m+[m
+ assets/img/main/dots2.svg                          |   1 [32m+[m
+ assets/img/main/dots3.svg                          |   1 [32m+[m
+ assets/js/home.js                                  |  14 [32m+[m[31m-[m
+ assets/resources.txt                               |   3 [32m+[m
+ index.html                                         | 117 [32m++++++[m[31m-[m
+ services.html                                      |   6 [32m+[m[31m-[m
+ 36 files changed, 552 insertions(+), 138 deletions(-)

@@ -24,14 +24,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
+  padding: 25px 30px;
   background-color: #fdfbfb;
   position: sticky;
   z-index: 10;
   box-shadow: 0 0.5px 1px 0 rgba(0,0,0,.2);
 }
 .Sitelogo {
-  width: 290px;
+  width: 250px;
   position: relative;
   margin-top: -40%;
   margin-bottom: -40%;
