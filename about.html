@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/calculator.css">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
@@ -44,7 +45,92 @@
         <!-- Mobile nav bar -->
     </header>
     <!-- End nav bar -->
-    
+    <!-- Calculator Button and Container -->
+    <div class="calculator-button-container">
+        <button class="calculator-button" onclick="revealModal()" data-type="modal">Get Estimate</button>
+    </div>
+    <div id="modal-calculator">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <h3>Get An Estimate</h3> -->
+                <span class="close" onclick="closeModal()">Close</span>
+            </div>
+            <div class="modal-body">
+                <h1 class="title">Shipping Estimate Price</h1>
+                <div class="tip">
+                    <br />
+                    <form>
+                        <div class="import-export">
+                        <p>Please select Import or Export:</p>
+                        <input type="radio" id="import" name="import-export" value="import">
+                        <label for="import">Import</label><br>
+                        <input type="radio" id="export" name="import-export" value="export">
+                        <label for="export">Export</label>
+                        <br>
+                        </div>
+                        <div class="bulk-container-import">
+                            <br>
+                        <p>Please select Break Bulk or Containerized:</p>
+                        <input type="radio" id="bulk" name="bulk-container-import" value="bulk">
+                        <label for="bulk">Break Bulk</label><br>
+                        <input type="radio" id="container" name="bulk-container-import" value="container">
+                        <label for="container">Containerized</label><br>
+                        </div>
+                        <div class="bulk-container-export">
+                            <br>
+                            <p>Please select Containerized (Break Bulk coming soon):</p>
+                            <input type="radio" id="bulk2" name="bulk-container-export" value="bulk">
+                            <label for="bulk">Break Bulk</label><br>
+                            <input type="radio" id="container2" name="bulk-container-export" value="container">
+                            <label for="container">Containerized</label><br>
+                        </div>
+                        <div class="truck-rail">
+                            <br>
+                        <p>Please select Mode of Transportation:<br>(Unimodal-From Djibouti to Addis Ababa. Contact us
+                            for more destination rates.)</p>
+
+                        <input type="radio" id="truck" name="Transportation" value="truck">
+                        <label for="truck">Truck</label><br>
+                        <input type="radio" id="rail" name="Transportation" value="rail">
+                        <label for="rail">Rail</label><br>
+                        </div>
+                       
+                        
+                        <p class="finalSelection">If shipping by Break Bulk, choose Tons and enter the amount of tons of the goods. <br> If
+                            shipping by Container, choose 20 or 40 feet container and enter how many containers will be
+                            needed.</p>
+                        <div class="containers-selection">
+                            <br>
+                            <p>Please checkmark both or either boxes and enter in amount.</p>
+                        <input type="checkbox" id="twentyFeet" name="Shipping Amount" value="twentyFeet"> <label>Number of
+                            20 feet containers: </label><input id="twentyContainerAmount"><br>
+                        <input type="checkbox" id="fortyFeet" name="Shipping Amount" value="fortyFeet"> <label>Number of 40
+                            feet containers:</label> <input id="fortyContainerAmount"><br>
+                        </div>
+                        <div class="tons-input">
+                            <br>
+                            <p>Please enter amount of tons:</p>
+                        <!-- <input type="" id="tons" name="Shipping Amount" value="tons">  -->
+                        <label>Tons:</label> <input
+                            id="bulkTonAmount" />
+                        </div>
+                    </form>
+                    <br>
+                    <div class="final-calculation">
+                    <label>Total: </label><input id="total" disabled /> <br /><br />
+                    <button id="calculate">Calculate</button>
+                    <br /><br />
+                    <p><a href=contact.html>Contact</a> us for more accurate rates.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <span class="close">&times;</span> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- End Calculator Button and Container -->
     <!-- Start About us landing -->
     <div class="aboutUsLanding">
         <img src="assets/img/About/aboutusimage2.jpg" alt="containers image">
@@ -68,6 +154,7 @@
         </div>
         <div id="opening"></div>
     </div>
+    
 
     <!-- End About us landing -->
 
@@ -326,6 +413,7 @@
     </footer>
     <!-- End Footer -->
     <script type="text/javascript" src="assets/js/about.js"></script>
+    <script type="text/javascript" src="assets/js/calculator.js"></script>
 </body>
 
 </html>

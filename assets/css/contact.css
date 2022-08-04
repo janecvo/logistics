@@ -78,7 +78,8 @@ label {
     color: #232350;
     border-style: solid;
     border-color: #232350;
-    border-radius: 10px;
+    transition: 0.4s;
+    
   }
   .contact-header {
     text-align: left;
