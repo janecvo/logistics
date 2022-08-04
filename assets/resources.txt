@@ -10,6 +10,9 @@ Light Mode
  ## nav bar: White: Hex #F7F7F7
  ## footer: Navy Blue: Hex  #292664
 
+ Dark Mode
+   background: #1f1d2b;
+
     Logo colors
  #ffd87c - Yellow
  #ffbd59 - Peach

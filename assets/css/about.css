@@ -6,21 +6,31 @@
 }
 .aboutUsLanding img {
   width: 100%;
-  margin-top: -8%;
+  opacity: 90%;
 }
 .top-left {
   position: absolute;
-  width: 70%;
+  width: 69%;
   top: 60px;
   left: 200px;
   padding: 50px;
   margin: auto;
   text-align: justify;
   border-radius: 10px;
-  border-top-right-radius: 50px;
+  border-top-right-radius: 60px;
+  border-top-left-radius: 5px;
 }
 .top-left p {
   font-weight: 500;
+}
+.top-left img {
+  position: absolute;
+  width: 10%;
+  top: -40px;
+  left: -40px;
+}
+.top-left:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
 }
 .aboutreadmore {
   font-size: 16px;
@@ -43,44 +53,22 @@ a {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0.5px 1px 0.5px rgba(0, 0, 0, 0.2);
   }
-}
-@media (max-width: 750px) {
-  .aboutUsLanding {
-    width: 400px;
-  }
-  .top-left {
-    position: relative;
-    width: 100%;
-    padding: 25px;
-    margin-bottom: 30%;
-    margin-top: -5%;
-    margin-left: -36%;
-  }
-  .aboutUsLanding img {
-    position: absolute;
-    height: 135vh;
-    width: 100vw;
-    opacity: 80%;
-  }
-  footer div a {
-    color: #999;
-  }
-}
-footer div a {
-  color: #999;
-}
+} 
 /* end of Landing Page */
 
 /* start of core values */
 .corevaluesbanner {
   height: 50vh;
+  width:100%;
+  background-color: #ffd87c;
 }
 .corevaluetitle {
-  margin-top: -10px;
+  margin-top: -5px;
   text-align: center;
   color: #232350;
   letter-spacing: 5px;
   padding: 25px;
+  background-color: #ffd87c;
 }
 .corevaluetitle h3::before {
   content: "─";
@@ -100,7 +88,7 @@ footer div a {
   position: relative;
   overflow: hidden;
   width: calc(20% - 2px);
-  height: 300px;
+  height: 295px;
   float: left;
 }
 .stat-header {
@@ -111,7 +99,7 @@ footer div a {
 .info-cover {
   background-color: #ffd87c;
   width: 100%;
-  height: 77.5%;
+  height: 75%;
   position: absolute;
   top: 0;
   left: 0;
@@ -208,6 +196,7 @@ footer div a {
   margin: auto;
   margin-top: -80px;
   margin-bottom: -90px;
+  background-color: rgba(0, 100, 200, 1);
 }
 .whatweoffercontainer .whatweofferinfo {
   width: 45%;
@@ -227,7 +216,7 @@ footer div a {
   font-size: 15px;
   color: #232350;
 }
-.whatweoffercontainer .whatweofferinfo button {
+.whatweoffercontainer .whatweofferinfo a button {
   border: 0;
   border-radius: 20px;
   padding: 12px 30px;
@@ -235,6 +224,10 @@ footer div a {
   cursor: pointer;
   color: #fff;
   background-color: #232350;
+}
+
+.whatweoffercontainer .whatweofferinfo a p {
+  color: #fff;
 }
 .whatweoffercontainer .whatweofferimage {
   width: 50%;
@@ -247,9 +240,6 @@ footer div a {
 /* End of what we offer */
 
 /* Start Partnerlogos */
-.partnerlogoscontainer {
-  margin-bottom: 30px;
-}
 .partnerlogoscontainer h1 {
   padding-top: 30px;
   padding-bottom: 10px;
@@ -308,16 +298,57 @@ footer div a {
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(250px * 12);
 }
 .slider .slide {
-  height: 100px;
-  width: 250px;
+  height: 140px;
+  width: 600px;
 }
 /* end Partnerlogos */
 
+.pdflink {
+  width: 50%;
+  padding: 20px 50px 20px 50px;
+  margin: 50px 50px 0 300px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #232350;
+  font-weight: 500;
+  background: #ffd87c;
+  overflow:hidden;
+}
+
+.pdflink:hover {
+  background: #fff;
+  color: #232350;
+}
+footer div a {
+  color: #999;
+}
+
 /* start of mobile */
 @media screen and (max-width: 550px) {
+  
+  .aboutUsLanding {
+    width: 100%;
+  }
+  .top-left {
+    position: relative;
+    width: 80%;
+    padding: 25px;
+    margin-bottom: 20%;
+    margin-top: -5%;
+    margin-left: -40%;
+  }
+  .aboutUsLanding img {
+    display: none;
+  }
+  footer div a {
+    color: #999;
+  }
   .corevaluesbanner {
     height: 100vh;
     margin-top: -20px;
@@ -347,6 +378,7 @@ footer div a {
     background-color: #15397f;
     height: 85%;
     width: 90%;
+    text-overflow: ellipsis;
   }
   .info-content a {
     color: #fff;
@@ -423,5 +455,13 @@ footer div a {
     position: absolute;
     text-align: justify;
   }
+  .pdflink {
+    width: 100%;
+    margin: 0;
+    border-radius: 0%;
+  }
+
 }
+
 /* end of mobile */
+
