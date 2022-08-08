@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +14,39 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-/* This banner is only to create a space between the nav and the footer*/
+/* loading screen */
+.pagecontent{
+  display: none;
+}
+.loader{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #16191e;
+  position: absolute;
+}
+.loader>div{
+  height: 70px;
+  width: 70px;
+  border: 2px solid #45474b;
+  border-top-color: #fff;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+  100%{
+      transform: rotate(360deg);
+  }
+}
+/* loading screen */
+
+/* space between the nav and the footer*/
 .section-content {
   height: 100vh;
 }
@@ -30,11 +66,14 @@ header {
   z-index: 10;
   box-shadow: 0 0.5px 1px 0 rgba(0,0,0,.2);
 }
+nav {
+  margin-right: -150px;
+}
 .Sitelogo {
-  width: 250px;
-  position: relative;
-  margin-top: -40%;
-  margin-bottom: -40%;
+  width: 270px;
+  position: absolute;
+  margin-top: -35px;
+  margin-bottom: -35px; 
 }
 header ul {
   position: relative;
@@ -81,6 +120,31 @@ header ul li a:hover {
   padding-bottom: 3px;
   border-radius: 5px;
 }
+
+/* Language */
+body{
+  top:0 !important;
+}
+.goog-te-banner-frame {
+  display: none;
+  height: 0 !important;
+  visibility: hidden
+}
+.goog-logo-link {
+  display:none !important;
+} 
+  
+.goog-te-gadget{
+  color: transparent !important;
+}
+
+#google_translate_element {
+  background-color: none;
+  background-image: none;
+  background: none;
+}
+
+/* Language */
 /* ================================ Web Nav bar ================================ */
 
 /* ================================ Mobile Nav ================================ */
@@ -125,10 +189,9 @@ header ul li a:hover {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 18%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
+  top: 83px;
+  left: 30px;
+  width: 85%;
   padding: 5%;
 }
 @media only screen and (max-width: 900px) {
@@ -137,6 +200,15 @@ header ul li a:hover {
   }
   #hamburger-icon {
     display: block;
+  }
+  #google_translate_element {
+    display: none;
+  }
+  .goog-te-menu2-item div, 
+  .goog-te-menu2-item:link div,
+  .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div, .goog-te-menu2 *
+   {
+    display: none !important;
   }
 }
 /* ================================ Mobile Nav ================================ */
@@ -167,7 +239,7 @@ footer .content {
 }
 footer .content p,
 a {
-  color: #999;
+  color: #f7f7f7;
 }
 footer .content .box {
   width: 33%;
@@ -208,7 +280,7 @@ footer .content .right input[type="text"] {
   height: 40px;
   width: 70%;
   outline: none;
-  color: #999;
+  color: #f7f7f7;
   background: #232350;
   border-radius: 5px;
   padding-left: 10px;
@@ -224,7 +296,7 @@ footer .content .right input[type="submit"] {
   height: 40px;
   width: 20%;
   font-size: 18px;
-  color: #999;
+  color: #f7f7f7;
   background: #232350;
   outline: none;
   border-radius: 5px;
@@ -245,10 +317,10 @@ footer .content .media-icons a {
   display: inline-block;
   text-align: center;
   border-radius: 100%;
-  border: 1px solid #999;
+  border: 1px solid #f7f7f7;
   margin: 20px 5px 5px 0;
   transition: all 0.3s ease;
-  color: #999;
+  color: #f7f7f7;
   background: #232350;
 }
 .content .media-icons a:hover {
@@ -312,5 +384,12 @@ a {
   footer .content .middle {
     padding-left: 0;
   }
+  .b-footer p {
+    margin-top: 20px;
+  }
+  .b-footer{
+    margin-top: 20px;
+  }
 }
 /* ================================ Footer ================================ */
+

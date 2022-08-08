@@ -9,14 +9,28 @@
     <link rel="icon" type="image/x-icon" href="assets/img/main/favicon.svg">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <!-- page loader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- language translator -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/path/to/cdn/jquery.slim.min.js"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({includedLanguages: 'en,am', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 
 <body>
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="pagecontent">
     <!-- nav bar -->
     <header>
         <!-- Web nav bar -->
-        <img src="assets/img/main/logo.png" alt="Logo" class="Sitelogo" />
+        <a href="index.html"><img src="assets/img/main/logo.png" alt="Logo" class="Sitelogo" /></a>
         <nav>
             <ul>
                 <li><a class="current" href="index.html">Home</a></li>
@@ -25,7 +39,9 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        <div id="google_translate_element"></div>
         <!-- Web nav bar -->
+
         <!-- Mobile nav bar -->
         <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
             <div class="bar1"></div>
@@ -36,11 +52,16 @@
                 <li><a href="services.html">Services</a></li><br>
                 <li><a href="about.html">About</a></li><br>
                 <li><a href="contact.html">Contact Us</a></li><br>
+                <li><a href="calculator.html">Get an estimate</a></li><br>
             </ul>
         </div>
+        
         <!-- Mobile nav bar -->
     </header>
+    
     <!-- nav bar -->
+
+    <!-- /* =================================================== */ -->
 
     <!-- start of Hero Section  -->
     <section class="section-content">
@@ -48,48 +69,55 @@
             <video src="assets/img/home/Freightliner.mp4" muted loop autoplay></video>
             <div class="overlay"></div>
             <div class="text">
-                <h2>Freightliner </h2>
-                <h3>Logistics and trading plc</h3>
-                <p>If it is movable, <br> We can move it fast, safe and to the right address.</p>
-                <a href="#opening">Learn more <i class="fas fa-angle-down"></i></a>
+                <h2 class="herotitletext"><span>Freight liner</span> <br> Logistics & Trading plc.</h2>
+                <p>If it is movable, We can move it fast, safe and to the right address.<br>
+                    We deliver like no other.
+                </p>
+                <a href="#opening">Learn more &emsp; <i class="fas fa-angle-down"></i></a>
             </div>
             <ul class="social">
+                <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
                 <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
                 <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
-                <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
             </ul>
         </section>
     </section>
     <!-- end of Hero Section  -->
 
-    <!-- Who we are -->
-    <div class="thecard" id="opening">
-        <div class="thethumbnail"><img class="theleft" src="assets/img/Home/workwithus.jpg" /></div>
-        <div class="theright"><br>
-            <h1>Why work with us </h1>
-            <div class="theseparator"></div> <br>
-            <p>Freightliner Trade and Logistics plc. has been able to undertake various projects
-                from multiple governmental and non-governmental organizations as well as diverse
-                businesses. So far we have been able to build a laudable reputation since we have
-                been quite successful in meeting every logistics requirements of our customers.
-                In a short period of time, Freightliner has become a favored logistics company. </p>
+    <!-- /* =================================================== */ -->
+
+    <!-- start of what we do -->
+    <div class="courses-container" id="opening">
+        <div class="course">
+            <div class="course-preview">
+                <h2>What We Do</h2>
+                <a href="contact.html">Contact us &emsp;<i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="course-info">
+                <p>Freight liner Trade and Logistics plc. has been able to undertake various projects
+                    from multiple governmental and non-governmental organizations as well as diverse
+                    businesses. So far we have been able to build a laudable reputation since we have
+                    been quite successful in meeting every logistics requirements of our customers.
+                    In a short period of time, Freight liner has become a favored logistics company.</p>
+            </div>
         </div>
     </div>
-    <!-- end of who we are -->
+    <div class="bordercolor"></div>
+    <!-- end of what we do -->
 
+    <!-- /* =================================================== */ -->
 
     <!-- Start of Services -->
-    <section class="servicessection"><br><br>
-        <section class="info">
-            <h3>OUR SERVICES</h3>
-        </section>
+    <section class="servicessection">
+        <div class="info">
+            <h3>Our Services</h3>
+        </div>
         <section class="servicescards-wrapper">
-
             <div class="card-grid-space">
                 <a class="servicescard" style="--bg-img: url(/assets/img/home/services/transport.jpeg)">
                     <div>
                         <h1>Freight forwarding</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>We utilize a range of freight carriers across air, ocean, road, and railway.</p>
                         <div class="cardnumber"><i class="fas fa-boxes"> </i></div>
                     </div>
                 </a>
@@ -99,7 +127,7 @@
                 <a class="servicescard" style="--bg-img: url(/assets/img/home/services/freight.jpeg)">
                     <div>
                         <h1>Transport</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>We enhance the end-to-end supply chain efficiency.</p>
                         <div class="cardnumber"><i class="fas fa-shipping-fast"> </i></div>
                     </div>
                 </a>
@@ -108,7 +136,7 @@
                 <a class="servicescard" style="--bg-img: url(/assets/img/home/services/customs.jpeg)">
                     <div>
                         <h1>Custom Clearance</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>We prepare documentations required to facilitate export and imports</p>
                         <div class="cardnumber"><i class="fas fa-clipboard-check"> </i></div>
                     </div>
                 </a>
@@ -118,7 +146,7 @@
                 <a class="servicescard" style="--bg-img: url(/assets/img/home/services/warehousing.jpg)">
                     <div>
                         <h1>Warehousing</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>We offer customized warehousing with a wide range of size and complexity.</p>
                         <div class="cardnumber"><i class="fas fa-warehouse"> </i></div>
                     </div>
                 </a>
@@ -128,7 +156,7 @@
                 <a class="servicescard" style="--bg-img: url(/assets/img/home/services/shipping.jpeg)">
                     <div>
                         <h1>Shipping Agency </h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>handling shipments and cargo at ports and harbors worldwide, </p>
                         <div class="cardnumber"><i class="fas fa-ship"> </i></div>
                     </div>
                 </a>
@@ -138,7 +166,7 @@
                 <a class="servicescard" style="--bg-img: url(/assets/img/home/services/insurance.jpeg)">
                     <div>
                         <h1>Insurance Agency</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>By getting insured, get a peace of mind and focus on what matters most.</p>
                         <div class="cardnumber"><i class="fas fa-hands"> </i></div>
                     </div>
                 </a>
@@ -148,38 +176,122 @@
     </section>
     <!-- End of services -->
 
-    <!-- Our locations -->
-    <section class="whycontainer">
-        <div class="whyboxes">
-            <div class="whybox"><br>
-                <h3> Locations</h3><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum.
-            </div>
-            <div class="whybox"><br>
-                <h3> Destinations</h3> <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum.
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- Our locations -->
+    <!-- /* =================================================== */ -->
 
+    <!-- Start FAQ's -->
+    <main class="faqsection">
+        <h1 class="faq-heading">Frequently Asked Questions</h1>
+        <!-- <hr class="hr-line"> -->
+        <section class="faq-container">
+            <div class="faq-one">
+                <!-- faq question -->
+                <h1 class="faq-page">Do you provide door to door service?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>YES, we provide door-to-door service. We will make every attempt to accommodate our
+                        valued customers. If accessibility is not possible, our drivers will arrange a reasonable
+                        alternate location.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">How much is your Service charge?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Service charges are different depending on the
+                        quantity and expected time of service. <br> For a rough estimate,
+                        please use our estimate calculator on this website. For an exact quote,
+                        please <a href="contact.html"> contact us here.</a> </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+                <h1 class="faq-page">How long does it take to deliver one shipment?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>If you have urgent cargo, let us know immediately and we will plan for it.<br>
+                        Keep in mind that getting your cargo onto the first-available sail date and
+                        vessel may sometimes mean higher prices.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-four">
+                <!-- faq question -->
+                <h1 class="faq-page">Can you give us credit for the payment?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>YES, we will! <br>
+                        You are welcome to use any of your credit for future payments as well.
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-five">
+                <!-- faq question -->
+                <h1 class="faq-page">How extensive is your network?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>We have a reliable and established international network which helps us facilitate
+                        the shipping process for our clients for a more streamlined end-to-end process. </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+        </section>
+    </main>
+    <script>
+        var faq = document.getElementsByClassName("faq-page");
+        var i;
+        for (i = 0; i < faq.length; i++) {
+            faq[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var body = this.nextElementSibling;
+                if (body.style.display === "block") {
+                    body.style.display = "none";
+                } else {
+                    body.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <!-- end FAQ's -->
+
+    <!-- start Locations -->
+    <div class="locationsdiv">
+        <div class="leftlocation">
+            <h2>Our Locations</h2>
+            <h3>Main Office</h3>
+            <p>Biselex Building, 3rd floor.
+                Suite number 307 & 308 <br>
+                Addis Ababa, Ethiopia</p>
+            <h3>Other Locations</h3>
+            <p>Metema Yohannes, Galafi, Dewele, Moyale, Toku Chale,<br>
+                Modjo, Addis Ababa, Kombolcha, Diredawa, Jijiga, <br>
+                Mekele, Hawasa, and Adama.</p>
+        </div>
+        <div class="rightlocation">
+            <p><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.0556793784217!2d38.80369889794371!3d9.017061656825133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85a278313799%3A0xa8e0674068769c97!2sBiselex%20Ethiopia%20Plc!5e0!3m2!1sen!2sus!4v1659724231569!5m2!1sen!2sus"
+                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> </p>
+        </div>
+    </div>
+    <!-- End locations -->
+    <!-- /* =================================================== */ -->
+
+
+    
     <!-- Footer -->
     <footer>
         <div class="content">
             <div class="left box">
                 <div class="upper">
-                    <div class="topic">Contact us</div>
+                    <div class="topic">Contact Us</div>
                     <div class="adress">
                         <a href="contact.html"><i class="fas fa-map-marker-alt"></i>&ensp;&nbsp; Biselex Building, 3rd
                             floor.
@@ -203,7 +315,7 @@
                 <div><a href="contact.html">Contact Us</a></div>
             </div>
             <div class="right box">
-                <div class="topic">Connect with Us</div>
+                <div class="topic">Connect With Us</div>
                 <form action="#">
                     <input type="text" placeholder="Enter email address">
                     <input type="submit" name="" value="Send">
@@ -221,8 +333,11 @@
             <p> &copy; Freightliner 2022 </p>
         </div>
     </footer>
+</div>
     <!-- Footer -->
     <script type="text/javascript" src="assets/js/home.js"></script>
+    <script type="text/javascript" src="assets/js/about.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
 </html>

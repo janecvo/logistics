@@ -2,6 +2,14 @@
 /* =================================================== */
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .body {
+    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
 /* transparent to solid nav bar */
 header {
@@ -28,27 +36,35 @@ header.sticky ul li a {
 .sticky #hamburger-icon div {
   background-color: #232350;
 }
+#hamburger-icon div {
+  background-color: #fff;
+}
 header ul li a {
   color: #fff;
 }
+nav {
+  margin-right: 0;
+}
+header.sticky nav {
+  margin-right: -150px;
+}
+
 /* transparent to solid nav bar */
-
 /* =================================================== */
 /* =================================================== */
-
 /* start of hero section */
+
 .showcase {
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
+  height: 103vh;
   padding: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.5s;
-  font-family: "open sans", sans-serif;
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .overlay {
@@ -80,26 +96,22 @@ header ul li a {
 }
 .text {
   position: relative;
+  justify-content: center;
 }
 .text h2 {
-  font-size: 3.4em;
-  font-weight: 500;
+  font-size: 1.6em;
+  letter-spacing: 3px;
+  font-weight: 700;
   color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-  font-family: "open sans", sans-serif;
-  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-}
-.text h3 {
-  font-size: 1.5em;
-  font-weight: 500;
-  color: #fff;
-  line-height: 1em;
+  line-height: 1.4em;
   text-transform: uppercase;
   font-family: "montserrat", sans-serif;
 }
+.text h2 span {
+  font-size: 1.2em;
+}
 .text p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #fff;
   margin: 20px 0;
   font-weight: 400;
@@ -108,27 +120,25 @@ header ul li a {
 }
 .text a {
   display: inline-block;
-  font-size: 1em;
-  color: #232350;
-  background: #fff;
-  padding: 10px 30px;
+  font-size: 0.8em;
+  color: #fff;
+  background: #292664;
+  padding: 10px 20px;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  letter-spacing: 2px;
+  font-weight: 400;
+  margin-top: 50px;
   transition: 0.2s;
-  border-radius: 1px;
+  border-radius: 5px;
 }
 .text a:hover {
   letter-spacing: 6px;
-  background-color: #ffd87c;
 }
 .social {
   position: absolute;
   bottom: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .social li {
@@ -136,6 +146,7 @@ header ul li a {
 }
 .social li a {
   display: inline-block;
+  justify-content: space-around;
   margin-right: 20px;
   filter: invert(1);
   transform: scale(0.5);
@@ -154,6 +165,7 @@ header ul li a {
   justify-content: center;
   align-items: center;
 }
+
 /* mobile */
 @media (max-width: 991px) {
   .showcase,
@@ -169,101 +181,143 @@ header ul li a {
   .text h3 {
     font-size: 1.5em;
   }
+  .text a {
+    margin-top: 20px;;
+  }
   .social {
     margin-left: 20px;
+  }
+  .course {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .course-preview a {
+    display: none;
+  }
+  .course-preview {
+    width: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+  .text {
+    margin-left: 20px;
+  }
+  .text h2 {
+    font-size: 1.5em;
+    margin-top: -200px;
+  }
+  .text h3 {
+    font-size: 1.5em;
+  }
+  .text a {
+    margin-top: 20px;;
+  }
+  .text p {
+    padding-right: 40px;
+  }
+  .social {
+    margin-left: 20px;
+  }
+  .course {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .course-preview a {
+    display: none;
+  }
+  .course-preview {
+    width: 100px;
   }
 }
 /* mobile */
 /* End of hero section */
-
 /* =================================================== */
 /* =================================================== */
-
-/* start of Work with us */
-.thecard {
+/* start of what we do */
+.courses-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -95px;
   position: relative;
-  height: 280px;
-  width: 100%;
-  margin: auto;
-  background: #0f0c29;  
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-  box-shadow: 0 0.5px 1px 0.5px rgba(0, 0, 0, 0.2);
-  margin-top: -60px;
-  margin-bottom: 100px;
+  z-index: 1;
 }
-.thethumbnail {
-  float: left;
-  position: relative;
-  left: 95px;
-  top: -30px;
-  height: 310px;
-  width: 530px;
-  overflow: hidden;
+.course {
+  background-color: #fff;
   border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.theleft {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: auto;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.theright {
-  margin-left: 670px;
-  margin-right: 20px;
-}
-.theright h1 {
-  padding-top: 30px;
-  font-size: 1.3rem;
-  color: #ffd87c;
-}
-.theright p {
-  text-align: justify;
-  font-size: 1rem;
-  color: #fff;
-  width:90%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 80%;
+  color: #232350;
   font-weight: 400;
+  font-size: large;
 }
-/* End  of Work with us */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .course {
+    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+.course h2 {
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+.course-preview {
+  background-color: #ffbd59;
+  color: #232350;
+  padding: 30px;
+  width: 25%;
+}
+.course-preview a {
+  color: #232350;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.course-preview a:hover {
+  letter-spacing: 2px;
+}
+.course-info {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
 
+/* End  of what we do */
 /* =================================================== */
 /* =================================================== */
-
 /*  Start of Services  */
+
 .servicessection {
   --color: #ffd87c;
-  --transition-time: 0.5s;
-  margin-bottom: 50px;
-  margin-top: -120px;
+  --transition-time: 0.7s;
+  margin-bottom: 40px;
   width: 100%;
-  color: #232350;  
+  color: #ffbd59;
+  box-shadow: 3px 3px 3px 3px #ffd87c;
 }
-.servicessection .info h3 {
-  text-align: center;
-  color: #232350;
+.info {
+  display: flex;
+  justify-content: flex-start;
+}
+.info h3 {
+  color: #292664;
   letter-spacing: 2px;
-  margin-left: -50px;
-}
-.servicessection h3::before {
-  content: "─";
-  margin-right: 0.6em;
-  color: #232350;
-}
-.servicessection h3::after {
-  content: "─";
-  margin-left: 0.6em;
-  color: #232350;
-}
-.servicescards-wrapper {
-  font-family: 'Open Sans';
-  width: 100%;
-  
+  font-size: larger;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: auto;
 }
 .servicescards-wrapper {
   display: grid;
@@ -276,9 +330,13 @@ header ul li a {
   width: max-content;
 }
 .servicescard {
-  font-family: 'open sans', sans-serif;
+  font-family: "open sans", sans-serif;
   --bg-filter-opacity: 0.5;
-  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, var(--bg-filter-opacity)),
+      rgba(0, 0, 0, var(--bg-filter-opacity))
+    ),
+    var(--bg-img);
   height: 12em;
   width: 15em;
   font-size: 1.5em;
@@ -303,11 +361,11 @@ header ul li a {
   margin: 0;
   font-size: 1em;
   line-height: 1.2em;
-  font-family: 'open sans', sans-serif;
+  font-family: "open sans", sans-serif;
 }
 .servicescard p {
   font-size: 0.75em;
-  font-family: 'monts', sans-serif;
+  font-family: "monts", sans-serif;
   margin-top: 0.5em;
   line-height: 2em;
   color: #fff;
@@ -316,13 +374,18 @@ header ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 1em;
   line-height: 1em;
-  opacity: .8;
+  opacity: 0.8;
 }
-.servicescard:before, .servicescard:after {
-  content: '';
+.servicescard .cardnumber::before {
+  color: #ffbd59;
+  display: block;
+}
+.servicescard:before,
+.servicescard:after {
+  content: "";
   transform: scale(0);
   transform-origin: top left;
   border-radius: 50%;
@@ -331,14 +394,13 @@ header ul li a {
   top: -50%;
   z-index: -5;
   transition: all, var(--transition-time);
-  transition-timing-function: ease-in-out;
-  
+  transition-timing-function: linear;
 }
 .servicescard:before {
   background-color: #232350;
   width: 250%;
   height: 250%;
-  color: #ffd87c;
+  color: #ffbd59;
 }
 .servicescard:after {
   background: #232350;
@@ -350,10 +412,11 @@ header ul li a {
   color: #ffd87c;
 }
 .servicescard p::before {
-  color: #232350;
+  color: #ffd87c;
 }
-.servicescard:hover:before, .card:hover:after {
-  transform: scale(1);
+.servicescard:hover:before,
+.card:hover:after {
+  transform: scale(1.1);
 }
 .card-grid-space .num {
   font-size: 3em;
@@ -374,9 +437,9 @@ header ul li a {
   font-size: 1em;
   font-weight: normal;
 }
- .servicescards-wrapper:hover {
-   color:#232350
- }
+.servicescards-wrapper:hover {
+  color: #232350;
+}
 
 @media screen and (max-width: 1170px) {
   .servicescards-wrapper {
@@ -384,6 +447,12 @@ header ul li a {
   }
   .thethumbnail {
     display: none;
+  }
+  .course-preview {
+    max-width: 100%;
+  }
+  .faq-body {
+    width: 60%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -393,8 +462,11 @@ header ul li a {
   .info {
     justify-content: center;
   }
-  .thethumbnail {
-    display: none;
+  .course-preview {
+    max-width: 100%;
+  }
+  .faq-body {
+    width: 60%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -406,6 +478,12 @@ header ul li a {
   }
   .thethumbnail {
     display: none;
+  }
+  .course-preview {
+    max-width: 100%;
+  }
+  .faq-body {
+    width: 60%;
   }
 }
 @media screen and (max-width: 450px) {
@@ -419,54 +497,184 @@ header ul li a {
   .thethumbnail {
     display: none;
   }
+  .faq-body {
+    width: 60%;
+  }
 }
+
 /*  End of services  */
-
 /* =================================================== */
 /* =================================================== */
-
+/* start of FAQ's */
+.faqsection {
+  background-color: #ffd87c;
+  margin-bottom: 10px;
+  font-family: "montserrat", sans-serif;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+.faq-heading {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: center;
+  color: #232350;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.6em;
+}
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.8em;
+  font-family: "montserrat", sans-serif;
+  font-weight: 100;
+}
+.hr-line {
+  width: 70%;
+  margin: auto;
+  background-color: #232350;
+  border: 1px solid #232350;
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+  cursor: pointer;
+  color: #232350;
+  padding: 20px 20px;
+  width: 70%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+}
+.faq-body {
+  margin: auto;
+  width: 70%;
+  padding: auto;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+  background-color: #232350;
+  color: #ffd87c;
+}
+/*faq-page panel. (hidden by default) */
+.faq-body {
+  padding: 20px;
+  background-color: #fdfbfb;
+  display: none;
+  overflow: hidden;
+  color: #232350;
+  font-size: large;
+  font-weight: 400;
+  width: 70%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.faq-body a {
+  list-style:underline;
+  color: #232350;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+.faq-body a:hover {
+  letter-spacing:3px;
+}
+.faq-page:after {
+  content: "\02795";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+  background-color: #232350;
+  border: 1px solid #232350;
+  border-radius: 100%;
+  color: #232350;
+}
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
+@media only screen and (max-width: 600px) {
+  .faq-page{
+    width: 80%;
+  }
+  .faq-page::after {
+    margin-left: 25px;
+}
+}
+/* End of faq */
+/* =================================================== */
+/* =================================================== */
 /* start of locations */
 
-.whycontainer {
-  padding: 40px;
-  color: #232350;
-  background-color: #ffd87c;
-  margin-bottom: 1px;
-}
-.whycontainer h3 {
-  font-size: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  text-align: center;
-  font-family: "open sans", serif;
-  color: #232350;
-}
-.whyboxes {
-  background-color: #ffd87c;
-  margin-top: 20px;
+.locationsdiv {
   display: flex;
-  justify-content: space-evenly;
-  height: 40%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 50px;
 }
-.whybox {
-  width: 40vw;
-  font-size: 1.1em;
-  font-weight: 300;
-  text-align: justify;
-  padding: 0 4vw 4vw;
-  border-right: 2px;
-  border-left: 0;
-  border-style: solid;
-  border-image: linear-gradient(to bottom, #ffbd59, #38b6ff, #ffbd59) 1 100%;
+.leftlocation {
+  flex: 50%;
 }
-.whybox:last-child {
-  border-right: 0;
-  text-align: justify;
-  margin-left: -40px;
+.rightlocation {
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+  flex: 50%;
+}
+.leftlocation h2 {
+  font-weight: 600;
+  font-size: 30px;
+  color: #232350;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.leftlocation h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: #232350;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.leftlocation h3:hover {
+  color: #ffbd59;
+  cursor: context-menu;
+}
+.leftlocation p {
+  font-weight: 400;
+  font-size: 1em;
+  color: #232350;
+}
+@media (max-width: 800px) {
+  .leftlocation, .rightlocation {
+    flex: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+.locationsdiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+}  
+iframe {
+  width: 100%;
+}
+.rightlocation {
+  margin-top: 20px;
+}
+.course-preview {
+  background: #ffbd59;
+  width: 100%;
+}
+.course-preview a {
+  display: none;
+}
+.servicescards-wrapper {
+  margin-top: -50px;
+}
 }
 /*  End of locations  */
-
 /* =================================================== */
 /* =================================================== */
 
-/* start of destinations */

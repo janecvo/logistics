@@ -8,15 +8,30 @@
     <title>Contact | Freightliner</title>
     <link rel="icon" type="image/x-icon" href="assets/img/main/favicon.svg">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- page loader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- language translator -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/path/to/cdn/jquery.slim.min.js"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({includedLanguages: 'en,am', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
 </head>
 
 <body>
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="pagecontent">
     <!-- nav bar -->
     <header>
         <!-- Web nav bar -->
-        <img src="assets/img/main/logo.png" alt="Logo" class="Sitelogo" />
+        <a href="index.html"></a><img src="assets/img/main/logo.png" alt="Logo" class="Sitelogo" /></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,6 +40,7 @@
                 <li><a class="current" href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        <div id="google_translate_element"></div>
         <!-- Web nav bar -->
         <!-- Mobile nav bar -->
         <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
@@ -137,7 +153,7 @@
         <div class="content">
             <div class="left box">
                 <div class="upper">
-                    <div class="topic">Contact us</div>
+                    <div class="topic">Contact Us</div>
                     <div class="adress">
                         <a href="contact.html"><i class="fas fa-map-marker-alt"></i>&ensp;&nbsp; Biselex Building, 3rd floor. 
                             <br> &emsp;&emsp;Suite number 307 & 308</a>
@@ -161,7 +177,7 @@
                 <div><a href="contact.html">Contact Us</a></div>
             </div>
             <div class="right box">
-                <div class="topic">Connect with Us</div>
+                <div class="topic">Connect With Us</div>
                 <form action="#">
                     <input type="text" placeholder="Enter email address">
                     <input type="submit" name="" value="Send">
@@ -169,7 +185,8 @@
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>&emsp;&emsp;
+                        <a href="#"><i class="fas fa-angle-double-up"></i></a>
                     </div>
                 </form>
             </div>
@@ -178,6 +195,7 @@
             <p> &copy; Freightliner 2022 </p>
         </div>
     </footer>
+</div>
     <!-- Footer -->
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
