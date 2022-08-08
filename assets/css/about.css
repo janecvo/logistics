@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 /* start of Landing Page */
 .aboutUsLanding {
   position: relative;
@@ -218,7 +222,7 @@ a {
 }
 .whatweoffercontainer .whatweofferinfo a button {
   border: 0;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 12px 30px;
   margin-top: 30px;
   cursor: pointer;
@@ -226,6 +230,16 @@ a {
   background-color: #232350;
 }
 
+.contactusbutton:hover {
+  background-color: #ffbd59;
+  letter-spacing: 4px;
+}
+.toprightdots {
+  position: absolute;
+  width: 10%;
+  top: -40px;
+  left: -40px;
+}
 .whatweoffercontainer .whatweofferinfo a p {
   color: #fff;
 }
@@ -283,7 +297,7 @@ a {
   content: "";
   height: 180px;
   position: absolute;
-  width: 200px;
+  width: 100px;
   z-index: 2;
 }
 .slider::after {
@@ -326,105 +340,67 @@ a {
   color: #232350;
 }
 footer div a {
-  color: #999;
+  color: #f7f7f7;
 }
 
+
 /* start of mobile */
-@media screen and (max-width: 550px) {
-  
+@media only screen and (max-width: 650px) {
+  .calculator-button-container {
+    display: none;
+  }
+  /* landing */
   .aboutUsLanding {
     width: 100%;
-  }
-  .top-left {
-    position: relative;
-    width: 80%;
+    background: linear-gradient(to right, #232350, #4286f4);
+    height: 150%;
     padding: 25px;
-    margin-bottom: 20%;
-    margin-top: -5%;
-    margin-left: -40%;
   }
   .aboutUsLanding img {
     display: none;
   }
-  footer div a {
-    color: #999;
-  }
-  .corevaluesbanner {
-    height: 100vh;
-    margin-top: -20px;
-    margin-bottom: 270px;
-    margin-left: 20px;
-  }
-  .infographic {
-    width: 100%;
-  }
-  .slide-up {
-    margin: 0px;
-    height: 15vw;
+  .top-left {
     position: relative;
-    overflow: hidden;
-    width: 50%;
-    height: 240px;
-    float: left;
+    width: 100%;
+    margin-bottom: 20%;
+    margin-top: -15%;
+    margin-left: -200px;
   }
-  .info-content {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    margin-top: 5px;
-    color: #fff;
-    font-weight: 100;
-    background-color: #15397f;
-    height: 85%;
-    width: 90%;
-    text-overflow: ellipsis;
-  }
-  .info-content a {
-    color: #fff;
-    font-weight: 600;
-  }
-  .graphic {
-    height: 50px;
-  }
-  .info-header {
-    font-size: 4vw;
-    font-weight: 600;
-    margin-top: 0.5em;
-    color: #ffffff;
-  }
-  .stat-header {
-    font-size: 5vw;
-    font-weight: 300;
-    margin-top: 0.5em;
-    color: #414042;
-  }
-  .stat-title {
-    font-size: 5vw;
-    color: #414042;
-  }
-  .info-cover {
-    background-color: #ffd87c;
-    width: 90%;
-    height: 85%;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    transition: all 0.4s ease;
-  }
-  .slide-up:hover .info-cover {
-    top: -85%;
-  }
-  .custom-span {
-    width: 100px;
-    background: rgba(50, 50, 50, 1);
-    height: 2px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
+/* corevalues */
+.corevaluesbanner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.infographic {
+  margin: auto;
+  width: 80%;
+  justify-content: center;
+}
+.info-content {
+  display: none;
+}
+.slide-up {
+  margin-bottom: -100px;
+  width: 50%;
+  float: center;
+}
+#infocoverlastchild{
+  display: none;
+}
+.info-cover {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin-top: -30px;
+}
+.slide-up:hover .info-cover {
+  top: 0%;
+}
+  /* why us */
   .whyboxes {
     border-image: none;
     display: flex;
@@ -443,25 +419,41 @@ footer div a {
     margin: auto;
     margin-top: -40px;
   }
-  .partnerlogoscontainer {
-    margin-top: 600px;
+  .whycontainer h1 {
+    font-size: small;
+  }
+  /* what we offer */
+  .whatweoffercontainer {
+    width:100%;
+    margin-top: -120px;
+  }
+  .whatweofferinfo {
+    min-width: 100%;
+    padding: 30px;
+    text-align: justify;
+  }
+  .whatweofferinfo a {
+    display: flex;
+    justify-content: flex-end;
   }
   .whatweofferimage {
     display: none;
   }
-  .whatweoffercontainer {
-    margin-left: 40px;
-    width: 900px;
-    position: absolute;
-    text-align: justify;
+  /* logos */
+  .partnerlogoscontainer {
+    margin-top: 600px;
   }
+  .slider h1 {
+    letter-spacing: normal;
+    text-transform:none;
+  }
+ /* pdflink */
   .pdflink {
     width: 100%;
     margin: 0;
-    border-radius: 0%;
+    margin-top: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
   }
-
 }
-
 /* end of mobile */
-
