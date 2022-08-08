@@ -7,20 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Freightliner</title>
     <link rel="icon" type="image/x-icon" href="assets/img/main/favicon.svg">
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/calculator.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+    <!-- loader screen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- language translator -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/path/to/cdn/jquery.slim.min.js"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({includedLanguages: 'en,am', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
+    <!-- language translator -->
 </head>
 
 <body>
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="pagecontent">
     <!-- Start nav bar -->
     <header>
         <!-- Web nav bar -->
-        <img src="assets/img/main/logo.png" alt="Logo" class="Sitelogo" />
+        <a href="index.html"><img src="assets/img/main/logo.png" alt="Logo" class="Sitelogo" /> </a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,6 +44,7 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        <div id="google_translate_element"></div>
         <!-- Web nav bar -->
         <!-- Mobile nav bar -->
         <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
@@ -237,7 +253,7 @@
                 </div>
             </div>
 
-            <div class="slide-up">
+            <div class="slide-up" id="infocoverlastchild">
                 <div class="info-content">
                     <p>From customer service to the delivery of some of the trickiest products,
                         we come up with the most innovative ways to guarantee the best service
@@ -260,7 +276,7 @@
 
     <!-- start why choose us-->
     <section class="whycontainer">
-        <h1>Why Choose us</h1>
+        <h1>Why Choose Us</h1>
         <div class="whyboxes">
             <div class="whybox"><br><br>
                 Finding a business organization that keeps its promises, puts integrity first,
@@ -278,14 +294,13 @@
                 deliver the best quality service the logistics industry can offer.
             </div>
         </div>
-        </div>
     </section>
     <!-- End why choose us-->
 
     <!-- Start of what we offer-->
     <div class="whatweoffercontainer">
         <div class="whatweofferinfo">
-            <h1>What we offer</h1>
+            <h1>What We Offer</h1>
             <p>Freightliner Logistics and Trading is a fast growing logistics service provider.
                 Our prior rich expertise in the field helps us meet your distinct logistics needs and requests.
                 We provide you with a trailblazing logistics services. <br><br>
@@ -295,7 +310,7 @@
                 service possible.
                 If you entrust us with your logistics demands, we will execute it flawlessly to the tiniest of details.
             </p>
-            <a href="contact.html"> <button>Contact Us</button> </a>
+            <a href="contact.html"> <button class="contactusbutton">Contact Us</button> </a>
         </div>
         <div class="whatweofferimage">
             <img src="assets/img/about/whatweoffer.png">
@@ -362,7 +377,7 @@
         <div class="content">
             <div class="left box">
                 <div class="upper">
-                    <div class="topic">Contact us</div>
+                    <div class="topic">Contact Us</div>
                     <div class="adress">
                         <a href="contact.html"><i class="fas fa-map-marker-alt"></i>&ensp;&nbsp; Biselex Building, 3rd
                             floor.
@@ -386,7 +401,7 @@
                 <div><a href="contact.html">Contact Us</a></div>
             </div>
             <div class="right box">
-                <div class="topic">Connect with Us</div>
+                <div class="topic">Connect With Us</div>
                 <form action="#">
                     <input type="text" placeholder="Enter email address">
                     <input type="submit" name="" value="Send">
@@ -404,9 +419,11 @@
             <p> &copy; Freightliner 2022 </p>
         </div>
     </footer>
+</div>
     <!-- End Footer -->
     <script type="text/javascript" src="assets/js/about.js"></script>
     <script type="text/javascript" src="assets/js/calculator.js"></script>
+    <script type="text/javascript" src="assets/js/language.js"></script>
 </body>
 
 </html>

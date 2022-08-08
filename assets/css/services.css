@@ -89,7 +89,13 @@ html {
 .services {
 	text-align: center;
 }
-
+.previousprojectstitle {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color:#232350;
+  text-transform: capitalize;
+}
 .mainservices {
 	font-family: sans-serif;
 	letter-spacing: 1px;
@@ -123,7 +129,7 @@ html {
 	bottom: 0;
 	left: 6%;
 	right: 0;
-	padding-bottom: 50px;
+	/* padding-bottom: 50px; */
     color: whitesmoke;
     text-shadow: 5px 5px 10px black;
     font-family: system-ui;
@@ -149,19 +155,19 @@ html {
 }
 
 #galleryCarousel {
-    width: 80%;
+    width: 100%;
     height: 80%;
     margin: auto;
-    padding-top: 3%;
+    /* padding-top: 3%; */
     padding-bottom: 3%;
 }
 
 .additionalservicestitle {
     text-align: center;
     color: #232350;
-    letter-spacing: 5px;
-    padding: 25px;
-    background-color: #ebedee;
+    padding: 10px;
+    background-color:  #ebedee;
+    margin-bottom: 50px;
   }
   .additionalservicestitle h3::before {
     content: "─";
@@ -179,32 +185,34 @@ html {
     min-height: 50vh;
     align-items: center;
     justify-content: center;
-    padding: 0.5em;
+    padding: 2em;
     margin-top: -80px;
     margin-bottom: -80px;
-    background-color: #ebedee;
+    background-color:  #ebedee;
   }
   .page-contain2 {
     display: flex;
     min-height: 50vh;
     align-items: center;
     justify-content: center;
-    padding: 1em;
-    background-color: #ebedee;
+    padding: 2em;
+    background-color:  #ebedee;
+    margin-bottom: -80px;
   }
 
   .data-card {
     display: flex;
     flex-direction: column;
-    max-width: 18em;
+    max-width: 22em;
     overflow: hidden;
-    border-radius: 0.5em;
     text-decoration: none;
     background: #232350;
-    margin: 1em;
+    margin: 20px;
+    margin-bottom: 65px;
     padding: 2em;
     box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, 0.1);
     transition: transform 0.45s ease, 0.45s ease;
+    
   }
   .data-card h3 {
     color: #fff;
@@ -232,7 +240,7 @@ html {
   }
   .data-card p {
     color: #fff;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 1.5;
     padding-top: 30px;
     transform: translateY(-1em);
@@ -241,7 +249,6 @@ html {
   }
   .data-card:hover {
     background: #ffbd59;
-    transform: scale(1.02);
   }
   .data-card:hover h3 {
     color: #232350;
@@ -252,7 +259,7 @@ html {
   }
   .data-card:hover p {
     color: #232350;
-    font-weight: 500;
+    
   }
   @keyframes point {
     0% {
@@ -265,14 +272,119 @@ html {
   
   a:link {
     text-decoration: none;
-    color: #999;
+    color: #f7f7f7;
   }
   a:visited {
     text-decoration: none;
-    color: #999;
+    color: #f7f7f7;
   }
 
   header ul li a:visited {
     color: #232350;
   }
-
+ /* main services */
+  #sec {
+    padding: 50px 0;
+    /* background-image: url(/assets/img/services/services.jpeg); */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background-size: cover;
+    text-align: center;
+    word-wrap: break-word;
+ }
+  #sec h2 {
+    font-weight: 600;
+    font-size: 26px;
+    color: #ffd87c;
+    margin-top: -30px;
+    padding: 20px;
+    text-transform: capitalize;
+ }
+ /* #sec h2::before {
+  content: "─";
+  margin-right: 0.6em;
+  color: #ffbd59;
+}
+#sec h2::after {
+  content: "─";
+  margin-left: 0.6em;
+  color: #ffbd59;
+} */
+  #sec ul {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+ }
+  #sec ul li {
+    padding: 40px;
+    width: 280px;
+    margin: 10px;
+    transition: box-shadow 0.3s;
+    border-top-right-radius: 50px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 10px 10px 10px 10px #ffbd59;
+ }
+ @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+   #sec ul li{
+    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 10px 0 0 #ffbd59;
+} 
+}
+  #sec ul li:hover {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+ }
+  #sec ul li:hover span {
+    color:  #07507e;
+ }
+  #sec ul li:hover p {
+    color: #232350;
+ }
+  #sec ul li:hover h3 {
+    color: #07507e;
+    letter-spacing:1px;
+ }
+  #sec ul li:hover h3:after {
+    width: 25px;
+ }
+  #sec ul li span {
+    font-size: 2em;
+    display: block;
+    transition: color 0.3s;
+    color: #232350;
+    margin-bottom: 20px;
+ }
+  #sec ul li span:before, #sec ul li span:after {
+    position: static;
+ }
+  #sec ul li h3 {
+    color: #232350;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    transition: color 0.3s;
+ }
+ 
+  #sec ul li h3:after {
+    content: 39;
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #6f6f6f;
+    transition: width 0.3s;
+ }
+  #sec ul li p {
+    color: #232350;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    transition: color 0.3s;
+    font-weight: 500;
+ }
