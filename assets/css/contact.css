@@ -89,7 +89,7 @@ label {
     color:#232350;
   }
   .contact-text {
-    font-size: 10px;
+    font-size: 14px;
   }
   .contact-form {
     /* float: right; */
@@ -173,6 +173,11 @@ label {
   text-align: left;
   margin-bottom: 10px;
 }
+.sub-text-email {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
 
 .sub-text-hours {
   text-align: left;
@@ -184,13 +189,17 @@ label {
   height: 21em;
   text-align: center;
   background-color: #ffd87c;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-bottom: 1rem solid  #232350;
   color: #232350;
   margin-left: 20px;
   margin-right: 20px;
   
+  
+}
+#message {
+  font-family: "open sans", sans-serif;
 }
 
 .contact-information-container {
