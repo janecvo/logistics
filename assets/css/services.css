@@ -89,7 +89,13 @@ html {
 .services {
 	text-align: center;
 }
-
+.previousprojectstitle {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color:#232350;
+  text-transform: capitalize;
+}
 .mainservices {
 	font-family: sans-serif;
 	letter-spacing: 1px;
@@ -123,7 +129,7 @@ html {
 	bottom: 0;
 	left: 6%;
 	right: 0;
-	padding-bottom: 50px;
+	/* padding-bottom: 50px; */
     color: whitesmoke;
     text-shadow: 5px 5px 10px black;
     font-family: system-ui;
@@ -149,10 +155,10 @@ html {
 }
 
 #galleryCarousel {
-    width: 80%;
+    width: 100%;
     height: 80%;
     margin: auto;
-    padding-top: 3%;
+    /* padding-top: 3%; */
     padding-bottom: 3%;
 }
 
@@ -160,7 +166,7 @@ html {
     text-align: center;
     color: #232350;
     padding: 10px;
-    background-color:  #ffd87c;
+    background-color:  #ebedee;
     margin-bottom: 50px;
   }
   .additionalservicestitle h3::before {
@@ -182,7 +188,7 @@ html {
     padding: 2em;
     margin-top: -80px;
     margin-bottom: -80px;
-    /* background-color:  #ffd87c; */
+    background-color:  #ebedee;
   }
   .page-contain2 {
     display: flex;
@@ -190,7 +196,7 @@ html {
     align-items: center;
     justify-content: center;
     padding: 2em;
-    /* background-color:  #ffd87c; */
+    background-color:  #ebedee;
     margin-bottom: -80px;
   }
 
@@ -206,6 +212,7 @@ html {
     padding: 2em;
     box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, 0.1);
     transition: transform 0.45s ease, 0.45s ease;
+    
   }
   .data-card h3 {
     color: #fff;
@@ -278,29 +285,31 @@ html {
  /* main services */
   #sec {
     padding: 50px 0;
-    background-image: url(/assets/img/services/services.jpeg);
+    /* background-image: url(/assets/img/services/services.jpeg); */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     background-size: cover;
     text-align: center;
     word-wrap: break-word;
  }
   #sec h2 {
     font-weight: 600;
-    font-size: 30px;
-    color: #232350;
+    font-size: 26px;
+    color: #ffd87c;
     margin-top: -30px;
     padding: 20px;
     text-transform: capitalize;
  }
- #sec h2::before {
+ /* #sec h2::before {
   content: "─";
   margin-right: 0.6em;
-  color: #232350;
+  color: #ffbd59;
 }
 #sec h2::after {
   content: "─";
   margin-left: 0.6em;
-  color: #232350;
-}
+  color: #ffbd59;
+} */
   #sec ul {
     margin: 0;
     display: flex;
@@ -313,7 +322,8 @@ html {
     width: 280px;
     margin: 10px;
     transition: box-shadow 0.3s;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 20px 20px 20px 20px #ffbd59;
+    border-top-right-radius: 50px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 10px 10px 10px 10px #ffbd59;
  }
  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
    #sec ul li{
