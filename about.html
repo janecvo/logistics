@@ -105,9 +105,9 @@
                         <p>Please select Mode of Transportation:<br>(Unimodal-From Djibouti to Addis Ababa. Contact us
                             for more destination rates.)</p>
 
-                        <input type="radio" id="truck" name="Transportation" value="truck">
+                        <input type="radio" id="truck" name="Transportation" value="truck" required>
                         <label for="truck">Truck</label><br>
-                        <input type="radio" id="rail" name="Transportation" value="rail">
+                        <input type="radio" id="rail" name="Transportation" value="rail" required>
                         <label for="rail">Rail</label><br>
                         </div>
                        
@@ -133,10 +133,14 @@
                     </form>
                     <br>
                     <div class="final-calculation">
-                    <label>Total: </label><input id="total" disabled /> <br /><br />
-                    <button id="calculate">Calculate</button>
+                        <button value="submit" id="calculate">Calculate</button>
+                    </div>
+                        <br>
+                        <br>
+                    <div class="reveal-results"><div class="total-container"><label class="total">Total: </label><input id="total" disabled /></div>
+                    
                     <br /><br />
-                    <p><a href=contact.html>Contact</a> us for more accurate rates.</p>
+                    <button class="calculator-contact">Contact us for more accurate rates.</button>
                     </div>
                 </div>
             </div>

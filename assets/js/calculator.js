@@ -84,7 +84,9 @@ getTotal.addEventListener("click", function() {
                 }
             }
             // By truck
-            else{ 
+            else{
+                if(truck.checked) {
+                    console.log("truck checked bulk import")
                 if(twentyFeet.checked){
                     calculatedTotal += twentyContainerAmountInput * importContainerTwentyTruck;
                     console.log("twenty feet import TRUCK ALONE")
@@ -99,6 +101,7 @@ getTotal.addEventListener("click", function() {
                 }
             }
         }
+    }
     } else if (choiceExport.checked) {
         console.log("Export is checked")
         //export
@@ -144,7 +147,7 @@ getTotal.addEventListener("click", function() {
     
 }
     
-    total.value = '$' + calculatedTotal;
+    total.value = calculatedTotal.toLocaleString('us-Us', {style: 'currency', currency: 'USD'});
     console.log(calculatedTotal)
     })
 
@@ -157,6 +160,7 @@ getTotal.addEventListener("click", function() {
         $(".containers-selection").hide();
         $(".final-calculation").hide();
         $(".finalSelection").hide();
+        $(".reveal-results").hide();
 
     $(document).ready(function() {
         $('input:radio[name=import-export]').click(function () {     
@@ -199,7 +203,17 @@ getTotal.addEventListener("click", function() {
         // alert("Aye yo this isn't done yet.")
        
     })
-
+    $('#calculate').click(function () {
+        $(".reveal-results").show();
+    })
 
 })
  
+$(window).bind('scroll', function() {
+    if ($(window).scrollTop() > 1200) {
+        $('.calculator-button').fadeOut();
+    }
+    else {
+        $('.calculator-button').show();
+    }
+});

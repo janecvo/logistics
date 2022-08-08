@@ -9,6 +9,17 @@
   overflow: auto; /* Enable scroll if needed */
   animation-name: animatetop;
   animation-duration: 0.4s;
+  background: rgb(0, 0, 0, 0.7);
+}
+
+.total-container {
+  display: flex;
+}
+
+.total {
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 20px;
 }
 
 @keyframes animatetop {
@@ -21,16 +32,32 @@
     opacity: 1;
   }
 }
+.calculator-contact {
+  cursor: pointer;
+    border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  background-color: #ffd87c;
+  color:#232350;
+  width: max-content;
+  transition: 0.4s;
+}
+
+.calculator-contact:hover {
+background-color: #232350;
+color:#ffd87c;
+}
+
 
 .calculator-button {
-  float: right;
-  font-weight: bold;
-  width: 130px;
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  z-index: 1;
-  border: 0;
+    float: right;
+    font-weight: bold;
+    width: 130px;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    z-index: 1;
+    border: 0;
   border-radius: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -42,6 +69,12 @@
   background-color: #ffd87c;
   box-shadow: 5px 5px;
   text-align: center;
+  transition: 0.5s;
+}
+
+.calculator-button:hover {
+  color:#ffd87c;
+  background-color:#232350;
 }
 
 form p {
@@ -85,12 +118,16 @@ form p {
 }
 
 #total {
-  padding: 10px;
-  width: 10%;
-  resize: both;
-  overflow: auto;
-  border-radius: 4px;
-
+    padding: 10px;
+    width: max-content;
+    /* max-width: 300px; */
+    resize:both;
+    overflow: auto;
+    border-radius: 4px;
+    font-size: 30px;
+    font-weight: 700;
+    background-color:#232350;
+    color:#ffd87c;
   font-size: 100%;
   font-weight: 700;
   background-color: #232350;
