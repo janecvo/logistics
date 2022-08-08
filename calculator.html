@@ -42,4 +42,139 @@
         <!-- Mobile nav bar -->
     </header>
     <!-- End nav bar -->
+    <!-- Calculator -->
+    <div id="modal-calculator">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <h3>Get An Estimate</h3> -->
+                <span class="close" onclick="closeModal()">Close</span>
+            </div>
+            <div class="modal-body">
+                <h1 class="title">Shipping Estimate Price</h1>
+                <div class="tip">
+                    <br />
+                    <form>
+                        <div class="import-export">
+                        <p>Please select Import or Export:</p>
+                        <input type="radio" id="import" name="import-export" value="import">
+                        <label for="import">Import</label><br>
+                        <input type="radio" id="export" name="import-export" value="export">
+                        <label for="export">Export</label>
+                        <br>
+                        </div>
+                        <div class="bulk-container-import">
+                            <br>
+                        <p>Please select Break Bulk or Containerized:</p>
+                        <input type="radio" id="bulk" name="bulk-container-import" value="bulk">
+                        <label for="bulk">Break Bulk</label><br>
+                        <input type="radio" id="container" name="bulk-container-import" value="container">
+                        <label for="container">Containerized</label><br>
+                        </div>
+                        <div class="bulk-container-export">
+                            <br>
+                            <p>Please select Containerized (Break Bulk coming soon):</p>
+                            <input type="radio" id="bulk2" name="bulk-container-export" value="bulk">
+                            <label for="bulk">Break Bulk</label><br>
+                            <input type="radio" id="container2" name="bulk-container-export" value="container">
+                            <label for="container">Containerized</label><br>
+                        </div>
+                        <div class="truck-rail">
+                            <br>
+                        <p>Please select Mode of Transportation:<br>(Unimodal-From Djibouti to Addis Ababa. Contact us
+                            for more destination rates.)</p>
+
+                        <input type="radio" id="truck" name="Transportation" value="truck" required>
+                        <label for="truck">Truck</label><br>
+                        <input type="radio" id="rail" name="Transportation" value="rail" required>
+                        <label for="rail">Rail</label><br>
+                        </div>
+                       
+                        
+                        <p class="finalSelection">If shipping by Break Bulk, choose Tons and enter the amount of tons of the goods. <br> If
+                            shipping by Container, choose 20 or 40 feet container and enter how many containers will be
+                            needed.</p>
+                        <div class="containers-selection">
+                            <br>
+                            <p>Please checkmark both or either boxes and enter in amount.</p>
+                        <input type="checkbox" id="twentyFeet" name="Shipping Amount" value="twentyFeet"> <label>Number of
+                            20 feet containers: </label><input id="twentyContainerAmount"><br>
+                        <input type="checkbox" id="fortyFeet" name="Shipping Amount" value="fortyFeet"> <label>Number of 40
+                            feet containers:</label> <input id="fortyContainerAmount"><br>
+                        </div>
+                        <div class="tons-input">
+                            <br>
+                            <p>Please enter amount of tons:</p>
+                        <!-- <input type="" id="tons" name="Shipping Amount" value="tons">  -->
+                        <label>Tons:</label> <input
+                            id="bulkTonAmount" />
+                        </div>
+                    </form>
+                    <br>
+                    <div class="final-calculation">
+                        <button value="submit" id="calculate">Calculate</button>
+                    </div>
+                        <br>
+                        <br>
+                    <div class="reveal-results"><div class="total-container"><label class="total">Total: </label><input id="total" disabled /></div>
+                    
+                    <br /><br />
+                    <button class="calculator-contact">Contact us for more accurate rates.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <span class="close">&times;</span> -->
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer -->
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">Contact us</div>
+                    <div class="adress">
+                        <a href="contact.html"><i class="fas fa-map-marker-alt"></i>&ensp;&nbsp; Biselex Building, 3rd
+                            floor.
+                            <br> &emsp;&emsp;Suite number 307 & 308</a>
+                    </div><br>
+                    <div class="phone">
+                        <a href="contact.html"><i class="fas fa-phone"></i>&ensp;&nbsp;+251 935 981 772
+                            <br> &emsp;&ensp;&nbsp;+251 960 437614
+                        </a>
+                    </div><br>
+                    <div class="email">
+                        <a href="contact.html"><i class="fas fa-envelope"></i>&ensp;&nbsp;admin@info.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="topic">Quick Links</div>
+                <div class="quicklinks"><a href="index.html">Home</a></div>
+                <div><a href="services.html">Services</a></div>
+                <div><a href="About.html">About</a></div>
+                <div><a href="contact.html">Contact Us</a></div>
+            </div>
+            <div class="right box">
+                <div class="topic">Connect with Us</div>
+                <form action="#">
+                    <input type="text" placeholder="Enter email address">
+                    <input type="submit" name="" value="Send">
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>&emsp;&emsp;
+                        <a href="#"><i class="fas fa-angle-double-up"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="b-footer">
+            <p> &copy; Freightliner 2022 </p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script type="text/javascript" src="assets/js/calculator.js"></script>
 </body>
+</html>
