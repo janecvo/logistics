@@ -161,6 +161,7 @@ getTotal.addEventListener("click", function() {
         $(".final-calculation").hide();
         $(".finalSelection").hide();
         $(".reveal-results").hide();
+        $('.calculator-button').hide();
 
     $(document).ready(function() {
         $('input:radio[name=import-export]').click(function () {     
@@ -214,6 +215,20 @@ $(window).bind('scroll', function() {
         $('.calculator-button').fadeOut();
     }
     else {
+        if($(window).width() > 900) {
         $('.calculator-button').show();
+        }
+        else {
+            $('.calculator-button').hide();
+        }
     }
-});
+    
+    }
+);
+
+// $(window).ready(function() {
+//     let viewWidth = $(window).width();
+//     if(viewWidth > 900) {
+//         $('.calculator-button').show();
+//     }
+// });

@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="assets/img/main/favicon.svg">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/calculator.css">
     <!-- page loader -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- language translator -->
@@ -52,7 +53,7 @@
                 <li><a href="services.html">Services</a></li><br>
                 <li><a href="about.html">About</a></li><br>
                 <li><a href="contact.html">Contact Us</a></li><br>
-                <li><a href="calculator.html">Get an estimate</a></li><br>
+                <li><a href="calculator.html">Get Estimate</a></li><br>
             </ul>
         </div>
         
@@ -83,7 +84,96 @@
         </section>
     </section>
     <!-- end of Hero Section  -->
+<!-- Calculator Button and Container -->
+<div class="calculator-button-container">
+    <button class="calculator-button" onclick="revealModal()" data-type="modal">Get Estimate</button>
+</div>
+<div id="modal-calculator">
+    <div class="modal-content">
+        <div class="modal-header">
+            <!-- <h3>Get An Estimate</h3> -->
+            <span class="close" onclick="closeModal()">Close</span>
+        </div>
+        <div class="modal-body">
+            <h1 class="title">Shipping Estimate Price</h1>
+            <div class="tip">
+                <br />
+                <form>
+                    <div class="import-export">
+                    <p>Please select Import or Export:</p>
+                    <input type="radio" id="import" name="import-export" value="import">
+                    <label for="import">Import</label><br>
+                    <input type="radio" id="export" name="import-export" value="export">
+                    <label for="export">Export</label>
+                    <br>
+                    </div>
+                    <div class="bulk-container-import">
+                        <br>
+                    <p>Please select Break Bulk or Containerized:</p>
+                    <input type="radio" id="bulk" name="bulk-container-import" value="bulk">
+                    <label for="bulk">Break Bulk</label><br>
+                    <input type="radio" id="container" name="bulk-container-import" value="container">
+                    <label for="container">Containerized</label><br>
+                    </div>
+                    <div class="bulk-container-export">
+                        <br>
+                        <p>Please select Containerized (Break Bulk coming soon):</p>
+                        <input type="radio" id="bulk2" name="bulk-container-export" value="bulk">
+                        <label for="bulk">Break Bulk</label><br>
+                        <input type="radio" id="container2" name="bulk-container-export" value="container">
+                        <label for="container">Containerized</label><br>
+                    </div>
+                    <div class="truck-rail">
+                        <br>
+                    <p>Please select Mode of Transportation:<br>(Unimodal-From Djibouti to Addis Ababa. Contact us
+                        for more destination rates.)</p>
 
+                    <input type="radio" id="truck" name="Transportation" value="truck" required>
+                    <label for="truck">Truck</label><br>
+                    <input type="radio" id="rail" name="Transportation" value="rail" required>
+                    <label for="rail">Rail</label><br>
+                    </div>
+                   
+                    
+                    <p class="finalSelection">If shipping by Break Bulk, choose Tons and enter the amount of tons of the goods. <br> If
+                        shipping by Container, choose 20 or 40 feet container and enter how many containers will be
+                        needed.</p>
+                    <div class="containers-selection">
+                        <br>
+                        <p>Please checkmark both or either boxes and enter in amount.</p>
+                    <input type="checkbox" id="twentyFeet" name="Shipping Amount" value="twentyFeet"> <label>Number of
+                        20 feet containers: </label><input id="twentyContainerAmount"><br>
+                    <input type="checkbox" id="fortyFeet" name="Shipping Amount" value="fortyFeet"> <label>Number of 40
+                        feet containers:</label> <input id="fortyContainerAmount"><br>
+                    </div>
+                    <div class="tons-input">
+                        <br>
+                        <p>Please enter amount of tons:</p>
+                    <!-- <input type="" id="tons" name="Shipping Amount" value="tons">  -->
+                    <label>Tons:</label> <input
+                        id="bulkTonAmount" />
+                    </div>
+                </form>
+                <br>
+                <div class="final-calculation">
+                    <button value="submit" id="calculate">Calculate</button>
+                </div>
+                    <br>
+                    <br>
+                <div class="reveal-results"><div class="total-container"><label class="total">Total: </label><input id="total" disabled /></div>
+                
+                <br /><br />
+                <button class="calculator-contact" onclick="location.replace('contact.html')">Contact us for more accurate rates.</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <!-- <span class="close">&times;</span> -->
+        </div>
+    </div>
+</div>
+
+<!-- End Calculator Button and Container -->
     <!-- /* =================================================== */ -->
 
     <!-- start of what we do -->
@@ -316,9 +406,9 @@
             </div>
             <div class="right box">
                 <div class="topic">Connect With Us</div>
-                <form action="#">
-                    <input type="text" placeholder="Enter email address">
-                    <input type="submit" name="" value="Send">
+                <form action="https://formspree.io/f/mvoypelv" method="POST">
+                    <input type="text" name="email" placeholder="Enter email address">
+                    <input type="submit" value="Send">
                     <div class="media-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -338,6 +428,7 @@
     <script type="text/javascript" src="assets/js/home.js"></script>
     <script type="text/javascript" src="assets/js/about.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/calculator.js"></script>
 </body>
 
 </html>

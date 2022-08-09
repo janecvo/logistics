@@ -56,6 +56,7 @@
                 <li><a href="services.html">Services</a></li><br>
                 <li><a href="about.html">About</a></li><br>
                 <li><a href="contact.html">Contact Us</a></li><br>
+                <li><a href="calculator.html">Get Estimate</a></li><br>
             </ul>
         </div>
         <!-- Mobile nav bar -->
@@ -140,7 +141,7 @@
                     <div class="reveal-results"><div class="total-container"><label class="total">Total: </label><input id="total" disabled /></div>
                     
                     <br /><br />
-                    <button class="calculator-contact">Contact us for more accurate rates.</button>
+                    <button class="calculator-contact" onclick="location.replace('contact.html')">Contact us for more accurate rates.</button>
                     </div>
                 </div>
             </div>
@@ -402,9 +403,9 @@
             </div>
             <div class="right box">
                 <div class="topic">Connect With Us</div>
-                <form action="#">
-                    <input type="text" placeholder="Enter email address">
-                    <input type="submit" name="" value="Send">
+                <form action="https://formspree.io/f/mvoypelv" method="POST">
+                    <input type="text" name="email" placeholder="Enter email address">
+                    <input type="submit" value="Send">
                     <div class="media-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
