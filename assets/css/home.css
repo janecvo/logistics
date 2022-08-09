@@ -329,11 +329,19 @@ nav {
   margin: -20px auto;
   width: max-content;
 
-}.graphicdots img{
+}
+.graphicdots img{
   width:8%;
   position: absolute;
   top: 915px;
   left: 40px;
+  z-index: 2;
+}
+.graphicdots2 img{
+  width:8%;
+  position: absolute;
+  top: 915px;
+  right: 40px;
   z-index: 2;
 }
 .servicescard {
