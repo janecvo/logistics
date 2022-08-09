@@ -24,7 +24,7 @@ header img {
 }
 header.sticky {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background: #fdfbfb;
 }
 header.sticky img {
@@ -45,10 +45,16 @@ header ul li a {
 nav {
   margin-right: 0;
 }
-/* header.sticky nav {
-  margin-right: -150px;
-} */
-
+header.sticky nav {
+  margin-left: 250px;
+}
+.google_translate_element {
+  width:100%;
+  position:relative
+}
+.google_translate_element {
+  width:100%;
+}
 /* transparent to solid nav bar */
 /* =================================================== */
 /* =================================================== */
@@ -333,15 +339,8 @@ nav {
 .graphicdots img{
   width:8%;
   position: absolute;
-  top: 915px;
-  left: 40px;
-  z-index: 2;
-}
-.graphicdots2 img{
-  width:8%;
-  position: absolute;
-  top: 915px;
-  right: 40px;
+  top: 870px;
+  left: 0;
   z-index: 2;
 }
 .servicescard {
