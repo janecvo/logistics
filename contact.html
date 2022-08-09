@@ -52,6 +52,7 @@
                 <li><a href="services.html">Services</a></li><br>
                 <li><a href="about.html">About</a></li><br>
                 <li><a href="contact.html">Contact Us</a></li><br>
+                <li><a href="calculator.html">Get Estimate</a></li><br>
             </ul>
         </div>
         <!-- Mobile nav bar -->
@@ -61,30 +62,35 @@
 
 <div class="contact-form">
     
-    <form id="clearFrom">
+    <form id="clearFrom" action="https://formspree.io/f/mvoypelv" method="POST">
         <h3 class="contact-header">Get In Touch</h3>
         <p class="contact-text">Have any questions? Fill in the form below. We try to get back as soon as possible.</p>
         <br>
         <div class="block-input">
-        <label for="fName">Full Name</label>
+        <label for="fName">Full Name
         <p></p>
         <input class="form-input" type="text" id="fName" name="fName" placeholder="Enter your full name" required>
-        </div>
+    </label>
+    </div>
         <div class="block-input">
-        <label for="email">Email Address</label>
+        <label for="email">Email Address
         <p></p>
         <input class="form-input" type="text" id="email" name="email" placeholder="Enter your email address" required>
+        </label>
         </div>
         <div class="block-input">
-        <label for="subject">Subject</label>
+        <label for="subject">Subject
         <p></p>
         <input class="form-input" type="text" id="subject" name="subect" placeholder="Enter your message subject" required>
+        </label>
         </div>
         <div class="block-input">
-        <label for="message">Message</label>
-        <textarea for="message" type="text" id="message" name="message" placeholder="Enter your message" required></textarea>
+        <label for="message">Message
+            <textarea for="message" type="text" id="message" name="message" placeholder="Enter your message" required></textarea>
+        </label>
         </div>
-        <button class="form-button" type="submit" id="submit">Submit</button>
+        <input class="form-button" id="submit" type="submit" value="Submit">
+        <!-- <button class="form-button" value="submit" type="submit" id="submit">Submit</button> -->
 
     </form>
 </div>
@@ -127,9 +133,9 @@
         <span class="info-line"></span>
         <p style="font-weight: bold">Email</p>
         <br>
-        <p class="sub-text-email">info@belylogisticsethiopia.com</p>
-        <p class="sub-text-email">operations@belylogisticsethiopia.com</p>
-        <p class="sub-text-email">bely@belylogistics.com</p>
+        <p class="sub-text-email">info@freightliner.com</p>
+        <p class="sub-text-email">operations@freightliner.com</p>
+        <p class="sub-text-email">bely@freightliner.com</p>
         <p class="sub-text-email">ermiasge@gmail.com</p>
         <p class="sub-text-email">infoermiasge@gmail.com</p>
     </div>
@@ -142,7 +148,7 @@
         <p class="sub-text-hours">8:00 AM - 05:00 PM East Africa Time (EAT)</p>
         <br>
         <p class="sub-text-hours">Saturday</p>
-        <p class="sub-text-hours">8:30 AM - 12:00 AM East Africa Time (EAT)</p>
+        <p class="sub-text-hours">8:30 AM - 12:00 PM East Africa Time (EAT)</p>
     </div>
     </div>
     
@@ -178,9 +184,9 @@
             </div>
             <div class="right box">
                 <div class="topic">Connect With Us</div>
-                <form action="#">
-                    <input type="text" placeholder="Enter email address">
-                    <input type="submit" name="" value="Send">
+                <form action="https://formspree.io/f/mvoypelv" method="POST">
+                    <input type="text" name="email" placeholder="Enter email address">
+                    <input type="submit" value="Send">
                     <div class="media-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
