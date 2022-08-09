@@ -86,6 +86,13 @@ label {
     position: relative;
     min-height: 65vh;
   }
+  .graphicdots img{
+    width:8%;
+    position: absolute;
+    top: 20px;
+    right: 360px;
+    z-index: 3;
+  }
 
 .contact-info-banner {
 
@@ -186,8 +193,10 @@ label {
 }
 @media only screen and (max-width: 1500px) and (min-width: 1151px) {
   .info-containers-group { 
-   
   flex-direction: row;
+  }
+  .graphicdots img{
+    display: none;
   }
 
 }
@@ -210,6 +219,9 @@ label {
   }
   .info-containers-group {
     flex-wrap: wrap;
+  }
+  .graphicdots img{
+    display: none;
   }
 }
 
@@ -269,8 +281,9 @@ label {
 }
 .small-text {
   font-size: 14px;
-  
-  
+}
+.graphicdots img{
+  display: none;
 }
 .sub-text-hours {
   font-size: 19px;

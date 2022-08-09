@@ -45,9 +45,9 @@ header ul li a {
 nav {
   margin-right: 0;
 }
-header.sticky nav {
+/* header.sticky nav {
   margin-right: -150px;
-}
+} */
 
 /* transparent to solid nav bar */
 /* =================================================== */
@@ -136,7 +136,7 @@ header.sticky nav {
 }
 .social {
   position: absolute;
-  bottom: 100px;
+  bottom: 130px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -170,7 +170,7 @@ header.sticky nav {
 @media (max-width: 991px) {
   .showcase,
   .showcase header {
-    padding: 40px;
+    padding: 50px;
   }
   .text {
     margin-left: 20px;
@@ -328,6 +328,21 @@ header.sticky nav {
   padding: 3rem;
   margin: -20px auto;
   width: max-content;
+
+}
+.graphicdots img{
+  width:8%;
+  position: absolute;
+  top: 915px;
+  left: 40px;
+  z-index: 2;
+}
+.graphicdots2 img{
+  width:8%;
+  position: absolute;
+  top: 915px;
+  right: 40px;
+  z-index: 2;
 }
 .servicescard {
   font-family: "open sans", sans-serif;
@@ -454,6 +469,9 @@ header.sticky nav {
   .faq-body {
     width: 60%;
   }
+  .graphicdots img{
+    display: none;
+  }
 }
 @media screen and (max-width: 900px) {
   .servicescards-wrapper {
@@ -467,6 +485,9 @@ header.sticky nav {
   }
   .faq-body {
     width: 60%;
+  }
+  .graphicdots img{
+    display: none;
   }
 }
 @media screen and (max-width: 500px) {
@@ -485,6 +506,9 @@ header.sticky nav {
   .faq-body {
     width: 60%;
   }
+  .graphicdots img{
+    display: none;
+  }
 }
 @media screen and (max-width: 450px) {
   .info {
@@ -499,6 +523,9 @@ header.sticky nav {
   }
   .faq-body {
     width: 60%;
+  }
+  .graphicdots img{
+    display: none;
   }
 }
 
