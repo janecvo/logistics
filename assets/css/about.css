@@ -410,14 +410,17 @@ footer div a {
   }
   .whybox {
     width: 100%;
-    text-align: justify;
+    text-align: center;
     border-style: none;
     margin-top: -40px;
+    border-image: none;
   }
   .whybox:last-child {
-    text-align: justify;
+    text-align: center;
     margin: auto;
     margin-top: -40px;
+    border-style: none;
+    border-image: none;
   }
   .whycontainer h1 {
     font-size: small;
